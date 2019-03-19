@@ -9,7 +9,6 @@ public class LandManager : MonoBehaviour {
 
 	private GameController gameController;
 	private BattleManager battleManager;
-	private WaveManager waveManager;
 
 	void Start() {
 		Initialise();
@@ -22,7 +21,6 @@ public class LandManager : MonoBehaviour {
 
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		battleManager = GameObject.FindGameObjectWithTag("BattleManager").GetComponent<BattleManager>();
-		waveManager = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveManager>();
 	}
 
 	public List<Unit> GetMonsters(Land land) {
@@ -36,29 +34,20 @@ public class LandManager : MonoBehaviour {
 	private IEnumerator RunBattle(List<Unit> men) {
 
 		print("Start Battle!");
-		print(men.Count);
 
 		for (int i = 0; i < landList.Length; i++) {
 			if (landList[i].isBought && men.Count > 0) {
-
-				print("Battle Reaches Land " + i);
-
 				landList[i].DisplayMen(men);
-
 				yield return StartCoroutine(battleManager.Battle(GetMonsters(landList[i]), men));
 
 				print("Battle in Land " + i + " complete!");
 
 			} else {
-				gameController.isWaveRunning = false;
-				waveManager.DespawnWave(men);
-				print("Wave Over");
+				gameController.EndWave(men);
 				yield break;
 			}
 		}
-		gameController.isWaveRunning = false;
-		waveManager.DespawnWave(men);
-		print("Wave Over");
+		gameController.EndWave(men);
 		yield return null;
 	}
 }

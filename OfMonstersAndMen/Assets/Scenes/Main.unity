@@ -992,7 +992,7 @@ MonoBehaviour:
   waveText: {fileID: 1683811167}
   shopCanvas: {fileID: 380009328}
   mana: 30
-  wave: 1
+  wave: 0
   isWaveRunning: 0
 --- !u!1 &380009325
 GameObject:

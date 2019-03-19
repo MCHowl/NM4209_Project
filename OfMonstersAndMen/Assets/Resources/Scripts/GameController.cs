@@ -29,10 +29,6 @@ public class GameController : MonoBehaviour {
 		waveText.text = "Wave: " + wave;
     }
 
-	void InitialiseGame() {
-		
-	}
-
 	public bool SpendMana(int cost) {
 		if (mana - cost >= 0) {
 			mana -= cost;
@@ -50,4 +46,11 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	public void EndWave(List<Unit> men) {
+		print("Wave Ended");
+
+		waveManager.DespawnWave(men);
+		mana += 20;
+		isWaveRunning = false;
+	}
 }
