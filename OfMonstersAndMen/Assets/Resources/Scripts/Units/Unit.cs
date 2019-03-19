@@ -44,8 +44,23 @@ public class Unit : MonoBehaviour {
 		Health = UnitStats.Constitution * 10;
 	}
 
+	public void DestroyUnit() {
+		Destroy(gameObject);
+	}
+
 	public void MoveTo(Vector3 position) {
 		transform.SetPositionAndRotation(position, Quaternion.identity);
+	}
+
+	public void SetLevel(int level) {
+		if (level >= 0 && Type == UnitType.Man) {
+			UnitStats.Strength += level;
+			UnitStats.Agility += level;
+			UnitStats.Defence += level;
+			UnitStats.Constitution += level;
+
+			Health = UnitStats.Constitution * 10;
+		}
 	}
 
 	// Helper Functions

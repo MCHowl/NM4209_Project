@@ -23,10 +23,7 @@ public class BattleManager : MonoBehaviour
 		defender.TakeDamage(finalDamage);
 	}
 
-	public static void Battle(Unit[] monsterUnits, Unit[] manUnits) {
-		List<Unit> monsters = new List<Unit>(monsterUnits);
-		List<Unit> men = new List<Unit>(manUnits);
-
+	public IEnumerator Battle(List<Unit> monsters, List<Unit> men) {
 		bool isMonsterAttack = true;
 
 		while (monsters.Count > 0 && men.Count > 0) {
@@ -36,14 +33,17 @@ public class BattleManager : MonoBehaviour
 			if (isMonsterAttack) {
 				Fight(monsterUnit, manUnit);
 				if (manUnit.Health < 0) {
-					Destroy(manUnit.gameObject);
+					manUnit.DestroyUnit();
 				}
 			} else {
 				Fight(manUnit, monsterUnit);
 				if (monsterUnit.Health < 0) {
-					Destroy(monsterUnit.gameObject);
+					monsterUnit.DestroyUnit();
 				}
 			}
+			isMonsterAttack = !isMonsterAttack;
+			yield return null;
 		}
+		yield return null;
 	}
 }

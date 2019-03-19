@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class Land : MonoBehaviour {
 
-	public Unit[] monsterUnits;
-	public Unit[] manUnits;
-
 	public bool isBought = false;
 	public bool isTreasureRoom;
+
+	public Transform[] monsterLocation;
+	public Transform[] manLocation;
+
+	[HideInInspector]
+	public List<Unit> monsterUnits;
 
 	private void Start() {
 		Initialise();
 	}
 
 	void Initialise() {
-		monsterUnits = new Unit[3];
-		manUnits = new Unit[3];
-	}
-
-	void Battle() {
-		BattleManager.Battle(monsterUnits, manUnits);
+		monsterUnits = new List<Unit>();
 	}
 
 	void AddMonster(Unit monster) {
 
 	}
 
-	void AddMan(Unit man) {
-
+	public void DisplayMen(List<Unit> men) {
+		for (int i = 0; i < men.Count; i++) {
+			men[i].MoveTo(manLocation[i].position);
+		}
 	}
 }

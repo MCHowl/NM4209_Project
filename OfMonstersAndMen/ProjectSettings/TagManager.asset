@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - MonsterManager
+  - LandManager
+  - WaveManager
+  - BattleManager
   layers:
   - Default
   - TransparentFX
