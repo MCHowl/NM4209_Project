@@ -93,10 +93,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Warrior
+  Mana: 10
   Type: 1
   UnitStats:
     Strength: 10
     Agility: 10
     Defence: 20
     Constitution: 20
-  UnitProtrait: {fileID: 21300094, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
+  UnitProtrait: {fileID: 21300080, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}

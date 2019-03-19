@@ -93,10 +93,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Mud Golem
+  Mana: 10
   Type: 0
   UnitStats:
     Strength: 8
     Agility: 5
     Defence: 17
     Constitution: 15
-  UnitProtrait: {fileID: 21300016, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
+  UnitProtrait: {fileID: 21300024, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}

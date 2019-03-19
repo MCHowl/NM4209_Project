@@ -25,4 +25,12 @@ public class LandManager : MonoBehaviour {
 	public void moveWave() {
 		waveProgress++;
 	}
+
+	public Unit[] GetMonsters(Land land) {
+		return land.monsterUnits;
+	}
+
+	public Unit[] GetMen (Land land) {
+		return land.manUnits;
+	}
 }

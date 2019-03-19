@@ -93,10 +93,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Hell Hound
+  Mana: 10
   Type: 0
   UnitStats:
     Strength: 12
     Agility: 20
     Defence: 5
     Constitution: 8
-  UnitProtrait: {fileID: 21300088, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
+  UnitProtrait: {fileID: 21300086, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}

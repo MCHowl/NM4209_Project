@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Land : MonoBehaviour {
 
-	Unit[] monsterUnits;
-	Unit[] manUnits;
+	public Unit[] monsterUnits;
+	public Unit[] manUnits;
 
 	public bool isBought = false;
 	public bool isTreasureRoom;
@@ -16,13 +16,18 @@ public class Land : MonoBehaviour {
 
 	void Initialise() {
 		monsterUnits = new Unit[3];
+		manUnits = new Unit[3];
 	}
 
 	void Battle() {
 		BattleManager.Battle(monsterUnits, manUnits);
 	}
 
-	void PlaceMonster(Unit[] monster) {
+	void AddMonster(Unit monster) {
+
+	}
+
+	void AddMan(Unit man) {
 
 	}
 }

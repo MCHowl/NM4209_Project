@@ -57,6 +57,7 @@ TextureImporter:
     21300104: Scavengers_SpriteSheet_52
     21300106: Scavengers_SpriteSheet_53
     21300108: Scavengers_SpriteSheet_54
+    21300110: Scavengers_SpriteSheet_55
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -154,9 +155,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 32
-        height: 32
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7967226a9ad8ad7448d9feb3f2049c2d
+      spriteID: b355a1af293c3ca418867352ab08dadd
       vertices: []
       indices: 
       edges: []
@@ -173,10 +174,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
-        height: 32
+        x: 100
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 920c3fe994817c74299731fb97aad43a
+      spriteID: be96d7236c13d61449eec57c4042d86e
       vertices: []
       indices: 
       edges: []
@@ -193,10 +194,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
-        height: 32
+        x: 200
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14182ac235cb32a43b6b42a05cfd64ae
+      spriteID: 016c00b673b00f4418de9f94df6eaf08
       vertices: []
       indices: 
       edges: []
@@ -213,10 +214,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
-        width: 32
-        height: 32
+        x: 300
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,7 +225,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e49403e94bcdc7e43b4fb236c4bed828
+      spriteID: bc7ad2333dbc76e4abf2c1c9621e1fbe
       vertices: []
       indices: 
       edges: []
@@ -233,10 +234,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
-        width: 32
-        height: 32
+        x: 400
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,7 +245,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30d429ba28b384842ade27017f4fb9c6
+      spriteID: 66f5f84063da47142b9dae3f1757cd02
       vertices: []
       indices: 
       edges: []
@@ -253,10 +254,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 192
-        width: 32
-        height: 32
+        x: 500
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,7 +265,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4311d20d647d1e248a68ea2e3f49b12c
+      spriteID: 254d1cfb376daeb4dab2fb50b8e6902f
       vertices: []
       indices: 
       edges: []
@@ -273,10 +274,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 32
-        height: 32
+        x: 600
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,7 +285,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcf2fdc762e22f44c9ac1278aa6f00b4
+      spriteID: 4dddeae9ea98d034d9835f8ad701bdc4
       vertices: []
       indices: 
       edges: []
@@ -293,10 +294,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
-        width: 32
-        height: 32
+        x: 700
+        y: 600
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,7 +305,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc39d58cfb8bfc64da29a89f4814b33d
+      spriteID: aa098394e64b91449af588975994189c
       vertices: []
       indices: 
       edges: []
@@ -314,9 +315,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 32
-        height: 32
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,7 +325,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087392c45fba8224f9cccd250b2ffce4
+      spriteID: 91def52187644424eb5ded83a9cc2dad
       vertices: []
       indices: 
       edges: []
@@ -333,10 +334,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
+        x: 100
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,7 +345,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae261ebf39319ed46a227f1194773d94
+      spriteID: 4b1d1fe2fc87c604dbd5c11cad186d7a
       vertices: []
       indices: 
       edges: []
@@ -353,10 +354,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
+        x: 200
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,7 +365,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09589211f58b48b48a20b703b434ca25
+      spriteID: 21a9695c8eff43245ba67a09d18f2e59
       vertices: []
       indices: 
       edges: []
@@ -373,10 +374,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
+        x: 300
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,7 +385,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3671e268bf4ce4ea9404b2d118a6f6
+      spriteID: f6af8c4b7c5d61f468738b1a76e8bd16
       vertices: []
       indices: 
       edges: []
@@ -393,10 +394,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
-        width: 32
-        height: 32
+        x: 400
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,7 +405,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd781a91c833f645a5a04f77abd5976
+      spriteID: 56e16f59d7062dd44a59039e7dc4f217
       vertices: []
       indices: 
       edges: []
@@ -413,10 +414,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_13
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
-        width: 32
-        height: 32
+        x: 500
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -424,7 +425,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec110df555ff58940a00db16d15158ac
+      spriteID: 010864d27bb810443939ee58b1a14aba
       vertices: []
       indices: 
       edges: []
@@ -433,10 +434,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_14
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
-        width: 32
-        height: 32
+        x: 600
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,7 +445,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e671b94ebd3d1354a8c47822f3021184
+      spriteID: 376da07c7d9487741b20b26fa9147275
       vertices: []
       indices: 
       edges: []
@@ -453,10 +454,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_15
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
-        width: 32
-        height: 32
+        x: 700
+        y: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -464,7 +465,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 355d2bad80a893b4680c1e164089e83f
+      spriteID: 6875b6475e95f8e41819ed1790d4c679
       vertices: []
       indices: 
       edges: []
@@ -474,9 +475,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 32
-        height: 32
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,7 +485,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 769c9aca55ac9fd458282e82feca26c4
+      spriteID: a3f92ec66711ace448a0ea96e9b8bb76
       vertices: []
       indices: 
       edges: []
@@ -493,10 +494,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_17
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
+        x: 100
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,7 +505,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 241899ad03fa54a429f95ebc951461de
+      spriteID: af3175a3d724d42439e3f27299665253
       vertices: []
       indices: 
       edges: []
@@ -513,10 +514,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_18
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
+        x: 200
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,7 +525,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c3ca2d308d3f944cb2bf128fabd3e72
+      spriteID: b7d4f9ec0aadb634e9cb4b48b8322464
       vertices: []
       indices: 
       edges: []
@@ -533,10 +534,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
-        width: 32
-        height: 32
+        x: 300
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,7 +545,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c47cf91068ea2024f8241ca2e24410bf
+      spriteID: 02fae649c645168478105b43667e0285
       vertices: []
       indices: 
       edges: []
@@ -553,10 +554,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_20
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 32
-        height: 32
+        x: 400
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,7 +565,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d9a03556a701ae4a98db3b3d9d0f97d
+      spriteID: cdc66cf3f47ae634c9108bebc0cbd547
       vertices: []
       indices: 
       edges: []
@@ -573,10 +574,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_21
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
-        width: 32
-        height: 32
+        x: 500
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -584,7 +585,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d31898bb29064cf47a745e56a3adbc53
+      spriteID: e2e6f356efccee440acf9d86e124bf96
       vertices: []
       indices: 
       edges: []
@@ -593,10 +594,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_22
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 32
-        height: 32
+        x: 600
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,7 +605,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcb8f09d59b72194886fed16842fb48e
+      spriteID: ecbeccfcd7976f845b33bee3634f31e0
       vertices: []
       indices: 
       edges: []
@@ -613,10 +614,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_23
       rect:
         serializedVersion: 2
-        x: 224
-        y: 128
-        width: 32
-        height: 32
+        x: 700
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,7 +625,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01122a94deee26346b5031fa0317d84c
+      spriteID: ecc5f7f40e7e7e249b8b6d9835b3f01b
       vertices: []
       indices: 
       edges: []
@@ -634,9 +635,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -644,7 +645,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d431505e842de446ba2ed82ba330e10
+      spriteID: ea07d2d50d08dd740ab570e157c18b8c
       vertices: []
       indices: 
       edges: []
@@ -653,10 +654,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_25
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 100
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,7 +665,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e811ddc9e987754f916dfdc23db0ae7
+      spriteID: b552f089808cc5e46b8c9a66ec47d877
       vertices: []
       indices: 
       edges: []
@@ -673,10 +674,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_26
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 200
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -684,7 +685,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c880bdec9fe4f6b4885510765c8bc4e2
+      spriteID: dca48404e72e4b142952b4bed73ac0fc
       vertices: []
       indices: 
       edges: []
@@ -693,10 +694,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_27
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
+        x: 300
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,7 +705,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8ac0d531dacfe74fa15ad97035ccec3
+      spriteID: caf21e7f4b8fe22428c71b3c191dd259
       vertices: []
       indices: 
       edges: []
@@ -713,10 +714,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_28
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
+        x: 400
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,7 +725,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5bf30270acfa3244ad70ab8cc93d6fc
+      spriteID: 7cb7f4371e0ae6f4a93ab97aa73a101e
       vertices: []
       indices: 
       edges: []
@@ -733,10 +734,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_29
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
+        x: 500
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -744,7 +745,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d55a9d23dd13144995b22e98c87904b
+      spriteID: df4689a9b592a6d4fb67fa68da53d9e2
       vertices: []
       indices: 
       edges: []
@@ -753,10 +754,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_30
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
+        x: 600
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -764,7 +765,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 169d82713d8d4b14481ab9b4cb91faf1
+      spriteID: 75fe7cc7b4371fa4f936d54170994918
       vertices: []
       indices: 
       edges: []
@@ -773,10 +774,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_31
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
-        width: 32
-        height: 32
+        x: 700
+        y: 300
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -784,7 +785,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb4dc262f6b93f49a257c86cb7f9bec
+      spriteID: 334063578c4b4e64f87794fa4cd1b46c
       vertices: []
       indices: 
       edges: []
@@ -794,9 +795,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,7 +805,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 245f325f0ff57b347b2d64144f8c97b9
+      spriteID: aacf24f07a1bea84a9272297d034a167
       vertices: []
       indices: 
       edges: []
@@ -813,10 +814,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_33
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 100
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,7 +825,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e14f6a5a96ae90d429b5fa3b6d96c6e7
+      spriteID: 0b57ff74b9824da498c798f799e9a920
       vertices: []
       indices: 
       edges: []
@@ -833,10 +834,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_34
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 200
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,7 +845,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 276f050dd0972ae43925869aa82b7af0
+      spriteID: f1461eeaa0e43ce4b94ad735ce3c6a48
       vertices: []
       indices: 
       edges: []
@@ -853,10 +854,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_35
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
+        x: 300
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -864,7 +865,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b956b8fdef715c7488198ba49d8514f1
+      spriteID: 93d9c1e3cc227ca4ba2c84111c42fefc
       vertices: []
       indices: 
       edges: []
@@ -873,10 +874,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_36
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
+        x: 400
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -884,7 +885,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59c4a655c6fd25847aad750b7bfaf56e
+      spriteID: 39cf4668dfd858b43b1b0f33d5a5df79
       vertices: []
       indices: 
       edges: []
@@ -893,10 +894,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_37
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
+        x: 500
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -904,7 +905,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e922a026294d54683e3a150531418e
+      spriteID: 48641b8fcb70c474fab064ef37587f7a
       vertices: []
       indices: 
       edges: []
@@ -913,10 +914,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_38
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
+        x: 600
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,7 +925,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de70b265ec7f78c4f88d56aa9da68ba3
+      spriteID: 9a61298d1f2f4084fa9ec9e8d1b77c4b
       vertices: []
       indices: 
       edges: []
@@ -933,10 +934,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_39
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
+        x: 700
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -944,7 +945,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2740c83ddfc35b14bb42f4dfd5a50220
+      spriteID: 78bafeb65034e9147b42abedd75709a7
       vertices: []
       indices: 
       edges: []
@@ -954,9 +955,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -964,7 +965,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1110f0a3cc1b34bac0984771474d37
+      spriteID: ac9871278490a6349b1ef9fea83fbdb9
       vertices: []
       indices: 
       edges: []
@@ -973,10 +974,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_41
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 100
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -984,7 +985,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b210b954c878cf468da2a327fbad839
+      spriteID: c58d07cbe78e0e640b2f16d46116d47c
       vertices: []
       indices: 
       edges: []
@@ -993,10 +994,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_42
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 200
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1004,7 +1005,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85994d92f03827846913b1a5530e6398
+      spriteID: 5608c3016a197c24284839729f31ba49
       vertices: []
       indices: 
       edges: []
@@ -1013,10 +1014,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_43
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
+        x: 300
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,7 +1025,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 825f0761914233b468742ae8b041bbb0
+      spriteID: f93d1c2d3f06b7c4ab98110108830331
       vertices: []
       indices: 
       edges: []
@@ -1033,10 +1034,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_44
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
+        x: 400
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1044,7 +1045,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69b6751337f7a804a87c86cbed675d87
+      spriteID: d6c3117fc5ff6f342a5d48f6a52c52dc
       vertices: []
       indices: 
       edges: []
@@ -1053,10 +1054,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_45
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
+        x: 500
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1064,7 +1065,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2a1fb90127913f448549815dfd5b64d
+      spriteID: 40fb35de1e63f7547915b408a4397f3f
       vertices: []
       indices: 
       edges: []
@@ -1073,10 +1074,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_46
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
+        x: 600
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1084,7 +1085,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b57dccad3157d24aa91f11feb386660
+      spriteID: 34a04259d55799e4498470133405b2a1
       vertices: []
       indices: 
       edges: []
@@ -1093,10 +1094,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_47
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
+        x: 700
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1104,7 +1105,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f68be23f05de449863670bee5e0f0c
+      spriteID: 5ee596619fe81514f856553084090a94
       vertices: []
       indices: 
       edges: []
@@ -1115,8 +1116,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1124,7 +1125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b85dad1349804c0409d63316eb061097
+      spriteID: 729ef0a1667253142b931485a9f56bef
       vertices: []
       indices: 
       edges: []
@@ -1133,10 +1134,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_49
       rect:
         serializedVersion: 2
-        x: 32
+        x: 100
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1144,7 +1145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bcf0e719653be14290b3db17770d8cd
+      spriteID: 476ff046a06430f40a955fd47bcd6956
       vertices: []
       indices: 
       edges: []
@@ -1153,10 +1154,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_50
       rect:
         serializedVersion: 2
-        x: 64
+        x: 200
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1164,7 +1165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de2f0b309c405cc4a9b8a3d35689cc6f
+      spriteID: 46342c19d02da34409ac27b0bf4b6ae5
       vertices: []
       indices: 
       edges: []
@@ -1173,10 +1174,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_51
       rect:
         serializedVersion: 2
-        x: 96
+        x: 300
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1184,7 +1185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48b1524cfabab124bb4492cabacd8710
+      spriteID: 785c7fb8f106a2648abc8c07db31a856
       vertices: []
       indices: 
       edges: []
@@ -1193,10 +1194,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_52
       rect:
         serializedVersion: 2
-        x: 128
+        x: 400
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1204,7 +1205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e957b226980668843a014331e1a2be2d
+      spriteID: 157b812d7fe115f409070dfc80b674ba
       vertices: []
       indices: 
       edges: []
@@ -1213,10 +1214,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_53
       rect:
         serializedVersion: 2
-        x: 160
+        x: 500
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1224,7 +1225,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9687d2f29f3501b4e92dbae6908d93c6
+      spriteID: 0e0e5c3e98995fa48beff86afc6a3737
       vertices: []
       indices: 
       edges: []
@@ -1233,10 +1234,10 @@ TextureImporter:
       name: Scavengers_SpriteSheet_54
       rect:
         serializedVersion: 2
-        x: 192
+        x: 600
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1244,7 +1245,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d062d3b8eca795a489bef0410d4b71a4
+      spriteID: c6a62182faba3e946805dc41a882529b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa6e995088fc4f4e99f07b58741e925
       vertices: []
       indices: 
       edges: []

@@ -1,27 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class GameController : MonoBehaviour
-{
-	public int initialMana = 30;
+public class GameController : MonoBehaviour {
+	public TextMeshProUGUI manaText;
+	public TextMeshProUGUI waveText;
 
-	private void Awake() {
-		
-	}
+	public Canvas shopCanvas;
 
-	void Start()
-    {
+	public int mana = 30;
+	private int wave = 1;
+
+	void Start() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+		manaText.text = "Mana: " + mana;
+		waveText.text = "Wave: " + wave;
     }
 
 	void InitialiseGame() {
 		
+	}
+
+	public bool SpendMana(int cost) {
+		if (mana - cost >= 0) {
+			mana -= cost;
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

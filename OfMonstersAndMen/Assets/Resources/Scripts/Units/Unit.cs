@@ -44,6 +44,10 @@ public class Unit : MonoBehaviour {
 		Health = UnitStats.Constitution * 10;
 	}
 
+	public void MoveTo(Vector3 position) {
+		transform.SetPositionAndRotation(position, Quaternion.identity);
+	}
+
 	// Helper Functions
 	public int GetAttackValue()
 	{
