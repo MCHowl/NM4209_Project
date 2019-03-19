@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour {
 	public TextMeshProUGUI manaText;
 	public TextMeshProUGUI waveText;
 
+	public TextMeshProUGUI eventText;
+
 	public Canvas shopCanvas;
 
 	private WaveManager waveManager;
@@ -53,4 +55,9 @@ public class GameController : MonoBehaviour {
 		mana += 20;
 		isWaveRunning = false;
 	}
+
+	public void UpdateEvent(string incomingText) {
+		eventText.text = incomingText;
+	}
+
 }

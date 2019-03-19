@@ -10,24 +10,54 @@ public class Land : MonoBehaviour {
 	public Transform[] monsterLocation;
 	public Transform[] manLocation;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public List<Unit> monsterUnits;
+	private int landLimit = 3;
 
-	private void Start() {
+	void Start() {
 		Initialise();
+	}
+
+	void Update() {
+		DisplayMonsters(monsterUnits);
 	}
 
 	void Initialise() {
 		monsterUnits = new List<Unit>();
 	}
 
-	void AddMonster(Unit monster) {
+	public bool AddMonster(Unit monster) {
+		if (monsterUnits.Count < landLimit) {
+			monsterUnits.Add(monster);
+			return true;
+		} else {
+			return false;
+		}
+	}
 
+	void DisplayMonsters(List<Unit> monsters) {
+		//for (int i = 0; i < monsters.Count; i++) {
+		//	monsters[i].GetComponent<SpriteRenderer>().enabled = true;
+		//	monsters[i].MoveTo(monsterLocation[i].position);
+		//}
+		int i = 0;
+		foreach(Unit monster in monsters) {
+			monster.GetComponent<SpriteRenderer>().enabled = true;
+			monster.MoveTo(monsterLocation[i].position);
+			i++;
+		}
 	}
 
 	public void DisplayMen(List<Unit> men) {
-		for (int i = 0; i < men.Count; i++) {
-			men[i].MoveTo(manLocation[i].position);
+		//for (int i = 0; i < men.Count; i++) {
+		//	men[i].MoveTo(manLocation[i].position);
+		//}
+
+		int i = 0;
+		foreach (Unit man in men) {
+			man.GetComponent<SpriteRenderer>().enabled = true;
+			man.MoveTo(manLocation[i].position);
+			i++;
 		}
 	}
 }

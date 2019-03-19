@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
+	private GameController gameController;
+
+	private void Start() {
+		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+	}
+
 	public static float StrengthModifier = 0.8f;
 	public static float AgilityModifier = 0.6f;
 	public static float DefenseModifier = 0.3f;
 
-	public static void Fight(Unit attacker, Unit defender) {
+	public void Fight(Unit attacker, Unit defender) {
 		float incomingDamage = attacker.GetAttackValue() * StrengthModifier;
 		float criticalDamage = attacker.GetCriticalValue();
 		float damageResisted = defender.GetDefenseValue() * DefenseModifier;
@@ -21,6 +27,8 @@ public class BattleManager : MonoBehaviour
 		float finalDamage = Mathf.Max(0, incomingDamage + criticalDamage - damageResisted);
 
 		defender.TakeDamage(finalDamage);
+
+		gameController.UpdateEvent(attacker.name + " hits " + defender.name + " for " + finalDamage);
 	}
 
 	public IEnumerator Battle(List<Unit> monsters, List<Unit> men) {
@@ -33,16 +41,20 @@ public class BattleManager : MonoBehaviour
 			if (isMonsterAttack) {
 				Fight(monsterUnit, manUnit);
 				if (manUnit.Health < 0) {
+					gameController.UpdateEvent(manUnit.name + " defeated");
+					men.Remove(manUnit);
 					manUnit.DestroyUnit();
 				}
 			} else {
 				Fight(manUnit, monsterUnit);
 				if (monsterUnit.Health < 0) {
+					gameController.UpdateEvent(monsterUnit.name + " defeated");
+					monsters.Remove(monsterUnit);
 					monsterUnit.DestroyUnit();
 				}
 			}
 			isMonsterAttack = !isMonsterAttack;
-			yield return null;
+			yield return new WaitForSeconds(0.5f);
 		}
 		yield return null;
 	}
