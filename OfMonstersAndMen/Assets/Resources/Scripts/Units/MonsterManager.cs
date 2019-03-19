@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class MonsterManager : MonoBehaviour
 {
-	public int initialMana = 30;
-
-	private void Awake() {
-		
-	}
-
-	void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         
     }
@@ -20,8 +15,4 @@ public class GameController : MonoBehaviour
     {
         
     }
-
-	void InitialiseGame() {
-		
-	}
 }
