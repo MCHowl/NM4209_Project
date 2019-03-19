@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour {
 	Canvas inventoryCanvas;
 	GameController gameController;
 	MonsterManager monsterManager;
+	LandManager landManager;
 
 	public TextMeshProUGUI monsterInfo;
 	public Button[] monsterButtons;
@@ -18,39 +19,50 @@ public class InventoryManager : MonoBehaviour {
     void Awake() {
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		monsterManager = GameObject.FindGameObjectWithTag("MonsterManager").GetComponent<MonsterManager>();
+		landManager = GameObject.FindGameObjectWithTag("LandManager").GetComponent<LandManager>();
 
 		inventoryCanvas = GetComponent<Canvas>();
 		CloseInventory();
 	}
 
-	/*private void OnEnable() {
-		//if (monsterManager == null) {
-		//	return;
-		//}
-
-		for (int i = 0; i < monsterManager.Inventory.Count; i++) {
-			monsterButtons[i].GetComponent<Image>().sprite = monsterManager.Inventory[i].UnitProtrait;
-		}
-	}
-
-	private void OnDisable() {
-		foreach (Button button in monsterButtons) {
-			button.GetComponent<Image>().sprite = null;
-		}
-	}*/
-
 	public void GetMonster(int i) {
-		if (monsterManager.Inventory.Count < i) {
+		if (i < monsterManager.Inventory.Count) {
 			currentMonster = monsterManager.Inventory[i];
 			monsterInfo.text = "Name: " + currentMonster.UnitName;
 		}
 	}
 
+	public void PlaceMonster() {
+		if (currentMonster != null) {
+			if (landManager.PlaceMonster(currentMonster)) {
+				monsterManager.RetrieveUnit(currentMonster);
+			}
+		}
+	}
+
+	public void SellMonster() {
+		if (currentMonster != null) {
+			monsterManager.RetrieveUnit(currentMonster);
+			currentMonster.DestroyUnit();
+			gameController.mana += 10;
+		}
+	}
+
 	public void OpenInventory() {
 		inventoryCanvas.enabled = true;
+
+		currentMonster = null;
+		monsterInfo.text = "";
+		for (int i = 0; i < monsterManager.Inventory.Count; i++) {
+			monsterButtons[i].GetComponent<Image>().sprite = monsterManager.Inventory[i].UnitProtrait;
+		}
 	}
 
 	public void CloseInventory() {
 		inventoryCanvas.enabled = false;
+
+		foreach (Button button in monsterButtons) {
+			button.GetComponent<Image>().sprite = null;
+		}
 	}
 }

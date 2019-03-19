@@ -30,6 +30,17 @@ public class LandManager : MonoBehaviour {
 		}
 	}
 
+	// Temporary Code
+	public bool PlaceMonster(Unit monster) {
+		foreach (Land land in landList) {
+			if (land.isBought && GetMonsters(land).Count < 3) {
+				land.AddMonster(monster);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public List<Unit> GetMonsters(Land land) {
 		return land.monsterUnits;
 	}
