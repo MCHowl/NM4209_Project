@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void EndWave(List<Unit> men) {
-		print("Wave Ended");
+		UpdateEvent("Wave Ended");
 
 		waveManager.DespawnWave(men);
 		mana += 20;

@@ -5,9 +5,7 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour {
 	GameController gameController;
 
-	public GameObject Man_Att;
-	public GameObject Man_Agi;
-	public GameObject Man_Def;
+	public GameObject[] manUnits;
 
     void Start() {
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -16,10 +14,16 @@ public class WaveManager : MonoBehaviour {
 	public List<Unit> SpawnWave() {
 		List<Unit> men = new List<Unit>();
 
-		// Replace Later
-		men.Add(Instantiate(Man_Att, transform).GetComponent<Unit>());
-		men.Add(Instantiate(Man_Agi, transform).GetComponent<Unit>());
-		men.Add(Instantiate(Man_Def, transform).GetComponent<Unit>());
+		// Spawn Men based on Wave
+		men.Add(GetMan());
+
+		if (gameController.wave > 2) {
+			men.Add(GetMan());
+		}
+
+		if (gameController.wave > 4) {
+			men.Add(GetMan());
+		}
 
 		// Set Level
 		foreach (Unit man in men) {
@@ -27,6 +31,10 @@ public class WaveManager : MonoBehaviour {
 		}
 
 		return men;
+	}
+
+	private Unit GetMan() {
+		return Instantiate(manUnits[Random.Range(0, manUnits.Length)]).GetComponent<Unit>();
 	}
 
 	public void DespawnWave(List<Unit> men) {

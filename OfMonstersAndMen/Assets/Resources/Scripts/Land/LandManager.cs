@@ -16,11 +16,18 @@ public class LandManager : MonoBehaviour {
 
 	private void Initialise() {
 		for (int i = 0; i < initialLand; i++) {
-			landList[i].isBought = true;
+			landList[i].BuyLand();
 		}
 
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		battleManager = GameObject.FindGameObjectWithTag("BattleManager").GetComponent<BattleManager>();
+	}
+
+	public void UnlockLand() {
+		if (initialLand < landList.Length) {
+			landList[initialLand].BuyLand();
+			initialLand++;
+		}
 	}
 
 	public List<Unit> GetMonsters(Land land) {
@@ -32,16 +39,10 @@ public class LandManager : MonoBehaviour {
 	}
 
 	private IEnumerator RunBattle(List<Unit> men) {
-
-		print("Start Battle!");
-
 		for (int i = 0; i < landList.Length; i++) {
 			if (landList[i].isBought && men.Count > 0) {
 				landList[i].DisplayMen(men);
 				yield return StartCoroutine(battleManager.Battle(GetMonsters(landList[i]), men));
-
-				print("Battle in Land " + i + " complete!");
-
 			} else {
 				gameController.EndWave(men);
 				yield break;

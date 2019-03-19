@@ -28,7 +28,7 @@ public class BattleManager : MonoBehaviour
 
 		defender.TakeDamage(finalDamage);
 
-		gameController.UpdateEvent(attacker.name + " hits " + defender.name + " for " + finalDamage);
+		gameController.UpdateEvent(attacker.UnitName + " hits " + defender.UnitName + " for " + finalDamage);
 	}
 
 	public IEnumerator Battle(List<Unit> monsters, List<Unit> men) {
@@ -41,20 +41,20 @@ public class BattleManager : MonoBehaviour
 			if (isMonsterAttack) {
 				Fight(monsterUnit, manUnit);
 				if (manUnit.Health < 0) {
-					gameController.UpdateEvent(manUnit.name + " defeated");
+					gameController.UpdateEvent(manUnit.UnitName + " defeated");
 					men.Remove(manUnit);
 					manUnit.DestroyUnit();
 				}
 			} else {
 				Fight(manUnit, monsterUnit);
 				if (monsterUnit.Health < 0) {
-					gameController.UpdateEvent(monsterUnit.name + " defeated");
+					gameController.UpdateEvent(monsterUnit.UnitName + " defeated");
 					monsters.Remove(monsterUnit);
 					monsterUnit.DestroyUnit();
 				}
 			}
 			isMonsterAttack = !isMonsterAttack;
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(1);
 		}
 		yield return null;
 	}

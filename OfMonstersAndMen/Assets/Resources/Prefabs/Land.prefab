@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -2066043957
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a51ac85b348f5b646aed4138bd703b75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 392192219d1fd4b4a872aebf6beb8ce8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02fd4a312c160b43bbbfe9afd0b31df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlockedSprite: {fileID: 21300000, guid: a51ac85b348f5b646aed4138bd703b75, type: 3}
   isBought: 0
-  isTreasureRoom: 0
   monsterLocation:
   - {fileID: 28629681727430953}
   - {fileID: 928191715320981067}
@@ -109,7 +109,6 @@ MonoBehaviour:
   - {fileID: 3567533365233925567}
   - {fileID: 7799072635625478045}
   monsterUnits: []
-  manUnits: []
 --- !u!1 &1006684654984800385
 GameObject:
   m_ObjectHideFlags: 0

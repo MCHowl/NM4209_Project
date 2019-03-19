@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Cerberus
+  UnitName: Cerberus
   Mana: 10
   Type: 0
   UnitStats:
