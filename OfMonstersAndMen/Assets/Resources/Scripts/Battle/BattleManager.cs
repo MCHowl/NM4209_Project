@@ -27,7 +27,11 @@ public class BattleManager : MonoBehaviour
 		float finalDamage = Mathf.Round(Mathf.Max(0, incomingDamage + criticalDamage - damageResisted) * 10f) / 10f;
 
 		defender.TakeDamage(finalDamage);
-		gameController.UpdateEvent(attacker.UnitName + " hits " + defender.UnitName + " for " + finalDamage);
+		if (attacker.Type == Unit.UnitType.Man) {
+			gameController.UpdateEvent("<color=\"red\">" + attacker.UnitName + "</color> hits <color=\"green\">" + defender.UnitName + "</color> for <color=\"orange\">" + finalDamage + "</color>");
+		} else {
+			gameController.UpdateEvent("<color=\"green\">" + attacker.UnitName + "</color> hits <color=\"red\">" + defender.UnitName + "</color> for <color=\"orange\">" + finalDamage + "</color>");
+		}
 	}
 
 	public IEnumerator Battle(List<Unit> monsters, List<Unit> men) {
@@ -40,7 +44,7 @@ public class BattleManager : MonoBehaviour
 			if (isMonsterAttack) {
 				Fight(monsterUnit, manUnit);
 				if (manUnit.Health < 0) {
-					gameController.UpdateEvent(manUnit.UnitName + " defeated");
+					gameController.UpdateEvent("<color=\"red\">" + manUnit.UnitName + "</color> defeated");
 					gameController.ConvertToMana(manUnit);
 					men.Remove(manUnit);
 					manUnit.DestroyUnit();
@@ -48,7 +52,7 @@ public class BattleManager : MonoBehaviour
 			} else {
 				Fight(manUnit, monsterUnit);
 				if (monsterUnit.Health < 0) {
-					gameController.UpdateEvent(monsterUnit.UnitName + " defeated");
+					gameController.UpdateEvent("<color=\"green\">" + monsterUnit.UnitName + "</color> defeated");
 					monsters.Remove(monsterUnit);
 					monsterUnit.DestroyUnit();
 				}
