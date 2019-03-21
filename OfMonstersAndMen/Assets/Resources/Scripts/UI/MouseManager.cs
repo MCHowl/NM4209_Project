@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MouseManager : MonoBehaviour {
 
@@ -12,6 +13,12 @@ public class MouseManager : MonoBehaviour {
 	private Land originalMonsterLand;
 	private Unit currentMonster;
 
+	public TextMeshProUGUI UnitNameField;
+	public TextMeshProUGUI UnitStrengthField;
+	public TextMeshProUGUI UnitAgilityField;
+	public TextMeshProUGUI UnitDefenceField;
+	public TextMeshProUGUI UnitHealthField;
+
     void Start() {
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		monsterManager = GameObject.FindGameObjectWithTag("MonsterManager").GetComponent<MonsterManager>();
@@ -19,15 +26,20 @@ public class MouseManager : MonoBehaviour {
     }
 
     void Update() {
+		DragAndDrop();
+		UpdateStats();
+    }
+
+	void DragAndDrop() {
 		if (currentMonster == null) {
 			// On "Drag" Start
 			if (Input.GetMouseButtonDown(0)) {
-				currentMonster = RaycastMonster();
+				currentMonster = RaycastUnit();
 				if (currentMonster != null) {
 					// Set invalid "Drop" position
 					originalMonsterPosition = currentMonster.transform.position;
 
-					//Verify Original Land
+					//Verify Source Land
 					originalMonsterLand = RaycastLand();
 					if (originalMonsterLand == null) {
 						Debug.LogWarning("Monster not tied to appropriate land");
@@ -41,15 +53,18 @@ public class MouseManager : MonoBehaviour {
 			mousePosition.z = 0;
 			currentMonster.MoveTo(mousePosition);
 
+			// On Drop
 			if (Input.GetMouseButtonUp(0)) {
 				Land land = RaycastLand();
 				if (land != null) {
+					// Find Valid Land
 					if (land.canAddMonster()) {
 						originalMonsterLand.RemoveMonster(currentMonster);
 						land.AddMonster(currentMonster);
 					} else {
 						currentMonster.MoveTo(originalMonsterPosition);
 					}
+					//Reset Position
 				} else {
 					currentMonster.MoveTo(originalMonsterPosition);
 				}
@@ -59,20 +74,39 @@ public class MouseManager : MonoBehaviour {
 				originalMonsterLand = null;
 			}
 		}
-    }
+	}
+
+	void UpdateStats() {
+		Unit unit = RaycastUnit(false);
+		if (unit == null) {
+			UnitNameField.text = "";
+			UnitStrengthField.text = "";
+			UnitAgilityField.text = "";
+			UnitDefenceField.text = "";
+			UnitHealthField.text = "";
+		} else {
+			UnitNameField.text = unit.UnitName;
+			UnitStrengthField.text = unit.UnitStats.Strength.ToString();
+			UnitAgilityField.text = unit.UnitStats.Agility.ToString();
+			UnitDefenceField.text = unit.UnitStats.Defence.ToString();
+			UnitHealthField.text = unit.Health.ToString();
+		}
+	}
 
 	RaycastHit2D[] GetRaycast() {
 		Vector3 mousePostion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		return Physics2D.RaycastAll(mousePostion, Vector2.zero);
 	}
 
-	Unit RaycastMonster() {
+	Unit RaycastUnit(bool isOnlyMonster = true) {
 		foreach (RaycastHit2D obj in GetRaycast()) {
-			Unit monster = obj.transform.GetComponent<Unit>();
+			Unit unit = obj.transform.GetComponent<Unit>();
 			
-			if (monster != null) {
-				if (monster.Type == Unit.UnitType.Monster) {
-					return monster;
+			if (unit != null) {
+				if (unit.Type == Unit.UnitType.Monster) {
+					return unit;
+				} else if (unit.Type == Unit.UnitType.Man && !isOnlyMonster) {
+					return unit;
 				}
 			}
 		}

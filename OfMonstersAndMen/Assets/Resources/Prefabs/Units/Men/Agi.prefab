@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1083853276349308433}
   - component: {fileID: 2053612153210805113}
   - component: {fileID: 3001947127083535667}
+  - component: {fileID: 1952342946830856124}
   m_Layer: 0
   m_Name: Agi
   m_TagString: Untagged
@@ -101,3 +102,29 @@ MonoBehaviour:
     Defence: 8
     Constitution: 10
   UnitProtrait: {fileID: 21300092, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
+--- !u!61 &1952342946830856124
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633622132534880859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
