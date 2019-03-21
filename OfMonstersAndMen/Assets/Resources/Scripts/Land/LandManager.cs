@@ -11,10 +11,6 @@ public class LandManager : MonoBehaviour {
 	private BattleManager battleManager;
 
 	void Start() {
-		Initialise();
-	}
-
-	private void Initialise() {
 		for (int i = 0; i < initialLand; i++) {
 			landList[i].BuyLand();
 		}
@@ -54,8 +50,10 @@ public class LandManager : MonoBehaviour {
 			if (landList[i].isBought && men.Count > 0) {
 				landList[i].DisplayMen(men);
 				yield return StartCoroutine(battleManager.Battle(GetMonsters(landList[i]), men));
+				landList[i].DisplayMonsters();
 			} else {
 				gameController.EndWave(men);
+				landList[i].DisplayMonsters();
 				yield break;
 			}
 		}

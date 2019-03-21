@@ -26,8 +26,8 @@ public class InventoryManager : MonoBehaviour {
 	}
 
 	public void GetMonster(int i) {
-		if (i < monsterManager.Inventory.Count) {
-			currentMonster = monsterManager.Inventory[i];
+		if (i < monsterManager.Inventory.monsterUnits.Count) {
+			currentMonster = monsterManager.Inventory.monsterUnits[i];
 			monsterInfo.text = "Name: " + currentMonster.UnitName;
 		}
 	}
@@ -53,8 +53,8 @@ public class InventoryManager : MonoBehaviour {
 
 		currentMonster = null;
 		monsterInfo.text = "";
-		for (int i = 0; i < monsterManager.Inventory.Count; i++) {
-			monsterButtons[i].GetComponent<Image>().sprite = monsterManager.Inventory[i].UnitProtrait;
+		for (int i = 0; i < monsterManager.Inventory.monsterUnits.Count; i++) {
+			monsterButtons[i].GetComponent<Image>().sprite = monsterManager.Inventory.monsterUnits[i].UnitProtrait;
 		}
 	}
 

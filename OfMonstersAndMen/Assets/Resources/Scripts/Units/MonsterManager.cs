@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour {
 
-	public List<Unit> Inventory;
-	private int inventoryLimit = 10;
+	//[HideInInspector]
+	//public List<Unit> Inventory;
+	public Land Inventory;
+	//public Transform[] InventoryLocation;
 
-    void Awake() {
-		Inventory = new List<Unit>();
-    }
+    void Start() {
+		Inventory = GetComponentInChildren<Land>();
+	}
 
 	public bool CreateUnit(GameObject monster) {
-		if (Inventory.Count <= inventoryLimit) {
+		if (Inventory.monsterUnits.Count <= Inventory.landLimit) {
 			Unit newMonster = Instantiate(monster, transform).GetComponent<Unit>();
 			StoreUnit(newMonster);
 
@@ -23,22 +25,14 @@ public class MonsterManager : MonoBehaviour {
 	}
 
 	public bool StoreUnit(Unit monster) {
-		if (Inventory.Count <= inventoryLimit) {
-			monster.GetComponent<SpriteRenderer>().enabled = false;
-			Inventory.Add(monster);
-			return true;
-		} else {
-			return false;
-		}
+		return Inventory.AddMonster(monster);
 	}
 
 	public bool RetrieveUnit(Unit monster) {
-		if (Inventory.Contains(monster)) {
-			monster.GetComponent<SpriteRenderer>().enabled = true;
-			Inventory.Remove(monster);
-			return true;
-		} else {
-			return false;
-		}
+		return Inventory.RemoveMonster(monster);
+	}
+
+	private void RefreshInventory() {
+		Inventory.DisplayMonsters();
 	}
 }

@@ -34,10 +34,6 @@ public class Unit : MonoBehaviour {
 	private SpriteRenderer spriteRenderer;
 
 	void Start() {
-		Initialise();
-	}
-
-	void Initialise() {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = UnitProtrait;
 

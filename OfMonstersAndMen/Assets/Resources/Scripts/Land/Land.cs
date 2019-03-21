@@ -12,21 +12,17 @@ public class Land : MonoBehaviour {
 
 	//[HideInInspector]
 	public List<Unit> monsterUnits;
-	private int landLimit = 3;
+	public int landLimit = 3;
 
 	private SpriteRenderer spriteRenderer;
 
 	void Awake() {
-		Initialise();
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		monsterUnits = new List<Unit>();
 	}
 
 	void Update() {
-		DisplayMonsters(monsterUnits);
-	}
-
-	void Initialise() {
-		spriteRenderer = GetComponent<SpriteRenderer>();
-		monsterUnits = new List<Unit>();
+		//DisplayMonsters();
 	}
 
 	public void BuyLand() {
@@ -34,19 +30,34 @@ public class Land : MonoBehaviour {
 		spriteRenderer.sprite = unlockedSprite;
 	}
 
+	public bool canAddMonster() {
+		return (monsterUnits.Count < landLimit && isBought);
+	}
+
 	public bool AddMonster(Unit monster) {
-		if (monsterUnits.Count < landLimit) {
+		if (canAddMonster()) {
 			monsterUnits.Add(monster);
+			DisplayMonsters();
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-	void DisplayMonsters(List<Unit> monsters) {
-		for (int i = 0; i < monsters.Count; i++) {
-			monsters[i].GetComponent<SpriteRenderer>().enabled = true;
-			monsters[i].MoveTo(monsterLocation[i].position);
+	public bool RemoveMonster(Unit monster) {
+		if (monsterUnits.Contains(monster)) {
+			monsterUnits.Remove(monster);
+			DisplayMonsters();
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void DisplayMonsters() {
+		for (int i = 0; i < monsterUnits.Count; i++) {
+			monsterUnits[i].GetComponent<SpriteRenderer>().enabled = true;
+			monsterUnits[i].MoveTo(monsterLocation[i].position);
 		}
 	}
 
