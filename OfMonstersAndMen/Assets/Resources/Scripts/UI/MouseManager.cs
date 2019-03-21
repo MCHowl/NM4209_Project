@@ -57,6 +57,13 @@ public class MouseManager : MonoBehaviour {
 			if (Input.GetMouseButtonUp(0)) {
 				Land land = RaycastLand();
 				if (land != null) {
+					// Check Shop
+					if (land.CompareTag("Shop")) {
+						originalMonsterLand.RemoveMonster(currentMonster);
+						gameController.ConvertToMana(currentMonster);
+						currentMonster.DestroyUnit();
+					}
+
 					// Find Valid Land
 					if (land.canAddMonster()) {
 						originalMonsterLand.RemoveMonster(currentMonster);

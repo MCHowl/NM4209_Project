@@ -42,6 +42,7 @@ public class BattleManager : MonoBehaviour
 				Fight(monsterUnit, manUnit);
 				if (manUnit.Health < 0) {
 					gameController.UpdateEvent(manUnit.UnitName + " defeated");
+					gameController.ConvertToMana(manUnit);
 					men.Remove(manUnit);
 					manUnit.DestroyUnit();
 				}

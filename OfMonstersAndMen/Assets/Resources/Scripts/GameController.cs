@@ -40,6 +40,20 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	public void GainMana(int gain) {
+		if (gain >= 0) {
+			mana += gain;
+		}
+	}
+
+	public void ConvertToMana(Unit unit) {
+		if (unit.Type == Unit.UnitType.Man) {
+			GainMana(unit.Mana);
+		} else if (unit.Type == Unit.UnitType.Monster) {
+			GainMana((int)(unit.Mana * unit.Health / (unit.UnitStats.Constitution * 10f)));
+		}
+	}
+
 	public void StartWave() {
 		if (!isWaveRunning) {
 			wave++;

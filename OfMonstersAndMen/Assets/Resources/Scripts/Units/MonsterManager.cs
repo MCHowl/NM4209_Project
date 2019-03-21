@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour {
 
-	//[HideInInspector]
-	//public List<Unit> Inventory;
+	[HideInInspector]
 	public Land Inventory;
-	//public Transform[] InventoryLocation;
 
     void Start() {
 		Inventory = GetComponentInChildren<Land>();
