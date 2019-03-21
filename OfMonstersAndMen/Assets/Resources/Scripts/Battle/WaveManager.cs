@@ -5,9 +5,10 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour {
 	GameController gameController;
 
+	[HideInInspector]
 	public GameObject[] manUnits;
 
-    void Start() {
+    void Awake() {
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 

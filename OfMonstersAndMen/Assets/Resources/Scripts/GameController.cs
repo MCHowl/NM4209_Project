@@ -14,19 +14,28 @@ public class GameController : MonoBehaviour {
 	private WaveManager waveManager;
 	private LandManager landManager;
 
+	public int EndOfWaveMana = 20;
 	[HideInInspector]
 	public int mana = 30;
 	[HideInInspector]
-	public int wave = 0;
+	public int wave = 1;
 	[HideInInspector]
 	public bool isWaveRunning = false;
 
-	void Start() {
+	private List<Unit> NextWave;
+	public Land WaveHoldingArea;
+
+	void Awake() {
 		waveManager = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveManager>();
 		landManager = GameObject.FindGameObjectWithTag("LandManager").GetComponent<LandManager>();
     }
 
-    void Update() {
+	void Start() {
+		NextWave = waveManager.SpawnWave();
+		WaveHoldingArea.DisplayMen(NextWave);
+	}
+
+	void Update() {
 		manaText.text = "Mana: " + mana;
 		waveText.text = "Wave: " + wave;
     }
@@ -56,9 +65,8 @@ public class GameController : MonoBehaviour {
 
 	public void StartWave() {
 		if (!isWaveRunning) {
-			wave++;
 			isWaveRunning = true;
-			landManager.StartWave(waveManager.SpawnWave());
+			landManager.StartWave(NextWave);
 		}
 	}
 
@@ -66,7 +74,11 @@ public class GameController : MonoBehaviour {
 		UpdateEvent("Wave Ended");
 
 		waveManager.DespawnWave(men);
-		mana += 20;
+		mana += EndOfWaveMana;
+		wave++;
+
+		NextWave = waveManager.SpawnWave();
+		WaveHoldingArea.DisplayMen(NextWave);
 		isWaveRunning = false;
 	}
 
