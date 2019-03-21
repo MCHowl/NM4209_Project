@@ -26,7 +26,10 @@ public class MouseManager : MonoBehaviour {
     }
 
     void Update() {
-		DragAndDrop();
+		if (!gameController.isWaveRunning) {
+			DragAndDrop();
+		}
+
 		UpdateStats();
     }
 

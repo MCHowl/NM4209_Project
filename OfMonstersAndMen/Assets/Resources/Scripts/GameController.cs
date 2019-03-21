@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameController : MonoBehaviour {
@@ -24,6 +25,9 @@ public class GameController : MonoBehaviour {
 
 	private List<Unit> NextWave;
 	public Land WaveHoldingArea;
+
+	public Button ShopButton;
+	public Button WaveButton;
 
 	void Awake() {
 		waveManager = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveManager>();
@@ -65,6 +69,10 @@ public class GameController : MonoBehaviour {
 
 	public void StartWave() {
 		if (!isWaveRunning) {
+			shopCanvas.enabled = false;
+			WaveButton.enabled = false;
+			ShopButton.enabled = false;
+
 			isWaveRunning = true;
 			landManager.StartWave(NextWave);
 		}
@@ -80,6 +88,9 @@ public class GameController : MonoBehaviour {
 		NextWave = waveManager.SpawnWave();
 		WaveHoldingArea.DisplayMen(NextWave);
 		isWaveRunning = false;
+
+		WaveButton.enabled = true;
+		ShopButton.enabled = true;
 	}
 
 	public void UpdateEvent(string incomingText) {
