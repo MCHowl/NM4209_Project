@@ -23,11 +23,10 @@ public class BattleManager : MonoBehaviour
 			criticalDamage = 0;
 		}
 
-		// Prevent negative damage
-		float finalDamage = Mathf.Max(0, incomingDamage + criticalDamage - damageResisted);
+		// Prevent negative damage and Round to prevent floating point errors
+		float finalDamage = Mathf.Round(Mathf.Max(0, incomingDamage + criticalDamage - damageResisted) * 10f) / 10f;
 
 		defender.TakeDamage(finalDamage);
-
 		gameController.UpdateEvent(attacker.UnitName + " hits " + defender.UnitName + " for " + finalDamage);
 	}
 
