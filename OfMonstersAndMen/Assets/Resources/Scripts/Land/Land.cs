@@ -21,13 +21,8 @@ public class Land : MonoBehaviour {
 		monsterUnits = new List<Unit>();
 	}
 
-	void Update() {
-		//DisplayMonsters();
-	}
-
-	public void BuyLand() {
-		isBought = true;
-		spriteRenderer.sprite = unlockedSprite;
+	public void UpdateSprite(Sprite newSprite) {
+		spriteRenderer.sprite = newSprite;
 	}
 
 	public bool canAddMonster() {

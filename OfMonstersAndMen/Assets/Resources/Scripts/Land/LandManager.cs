@@ -4,37 +4,56 @@ using UnityEngine;
 
 public class LandManager : MonoBehaviour {
 
-	public int initialLand = 3;
+	public int landCount = 3;
+	public int landCost = 30;
 	public Land[] landList;
+
+	public Sprite UnlockedSprite;
+	public Sprite LockedSprite;
+	public Sprite TreasureSprite;
 
 	private GameController gameController;
 	private BattleManager battleManager;
 
 	void Start() {
-		for (int i = 0; i < initialLand; i++) {
-			landList[i].BuyLand();
+		for (int i = 0; i < landCount; i++) {
+			UnlockLand(i);
 		}
 
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		battleManager = GameObject.FindGameObjectWithTag("BattleManager").GetComponent<BattleManager>();
 	}
 
-	public void UnlockLand() {
-		if (initialLand < landList.Length) {
-			landList[initialLand].BuyLand();
-			initialLand++;
+	public void BuyLand() {
+		if (gameController.SpendMana(landCost)) {
+			if (landCount < landList.Length) {
+				UnlockLand(landCount);
+				landCount++;
+			}
 		}
 	}
 
-	// Temporary Code
-	public bool PlaceMonster(Unit monster) {
-		foreach (Land land in landList) {
-			if (land.isBought && GetMonsters(land).Count < 3) {
-				land.AddMonster(monster);
-				return true;
-			}
+	public void SellLand() {
+		if (landCount > 1) {
+			gameController.GainMana(landCost * 2 / 3);
+			LockLand(landCount);
+			landCount--;
 		}
-		return false;
+	}
+
+	public void UnlockLand(int i) {
+		landList[i].isBought = true;
+		landList[i].UpdateSprite(UnlockedSprite);
+
+		if (i < landList.Length - 1) {
+			landList[i+1].UpdateSprite(TreasureSprite);
+		}
+	}
+
+	public void LockLand(int i) {
+		landList[i-1].isBought = false;
+		landList[i-1].UpdateSprite(TreasureSprite);
+		landList[i].UpdateSprite(LockedSprite);
 	}
 
 	public List<Unit> GetMonsters(Land land) {

@@ -19,7 +19,7 @@ public class ShopManager : MonoBehaviour {
 
 
 	public void BuyUnit(GameObject monster) {
-		if (gameController.SpendMana(10)) {
+		if (gameController.SpendMana(monster.GetComponent<Unit>().Mana)) {
 			monsterManager.CreateUnit(monster);
 		}
 	}
