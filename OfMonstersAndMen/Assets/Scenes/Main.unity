@@ -6396,7 +6396,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 394592393}
+      - m_Target: {fileID: 380009329}
         m_MethodName: SellLand
         m_Mode: 1
         m_Arguments:
@@ -7557,7 +7557,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 394592393}
+      - m_Target: {fileID: 380009329}
         m_MethodName: BuyLand
         m_Mode: 1
         m_Arguments:

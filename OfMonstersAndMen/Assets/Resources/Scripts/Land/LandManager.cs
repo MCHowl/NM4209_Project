@@ -24,23 +24,6 @@ public class LandManager : MonoBehaviour {
 		battleManager = GameObject.FindGameObjectWithTag("BattleManager").GetComponent<BattleManager>();
 	}
 
-	public void BuyLand() {
-		if (gameController.SpendMana(landCost)) {
-			if (landCount < landList.Length) {
-				UnlockLand(landCount);
-				landCount++;
-			}
-		}
-	}
-
-	public void SellLand() {
-		if (landCount > 1) {
-			gameController.GainMana(landCost * 2 / 3);
-			LockLand(landCount);
-			landCount--;
-		}
-	}
-
 	public void UnlockLand(int i) {
 		landList[i].isBought = true;
 		landList[i].UpdateSprite(UnlockedSprite);
