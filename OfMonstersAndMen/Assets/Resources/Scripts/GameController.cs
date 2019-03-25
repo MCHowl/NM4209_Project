@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour {
 		if (unit.Type == Unit.UnitType.Man) {
 			GainMana(unit.Mana);
 		} else if (unit.Type == Unit.UnitType.Monster) {
-			GainMana((int)(unit.Mana * unit.Health / (unit.UnitStats.Constitution * 10f)));
+			GainMana((int)(unit.Mana * 0.75f));
 		}
 	}
 

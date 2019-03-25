@@ -91,7 +91,7 @@ public class UnitManager : MonoBehaviour
 		MonsterDefence.text = selectedMonster.UnitStats.Defence.ToString();
 		MonsterHealth.text = selectedMonster.Health.ToString();
 
-		Sell.GetComponentInChildren<TextMeshProUGUI>().text = "Sell (" + (int)(selectedMonster.Mana * selectedMonster.Health / (selectedMonster.UnitStats.Constitution * 10f)) + ")";
+		Sell.GetComponentInChildren<TextMeshProUGUI>().text = "Sell (" + (int)(selectedMonster.Mana * 0.75f) + ")";
 
 		if (selectedMonster.Health < selectedMonster.UnitStats.Constitution * 10) {
 			Heal.enabled = true;
