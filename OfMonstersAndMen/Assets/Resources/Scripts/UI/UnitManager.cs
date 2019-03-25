@@ -62,7 +62,7 @@ public class UnitManager : MonoBehaviour
 			sourceLand.RemoveMonster(selectedMonster);
 			selectedMonster.DestroyUnit();
 
-			Unit newMonster = Instantiate(upgradesAvailable[i], transform).GetComponent<Unit>();
+			Unit newMonster = Instantiate(upgradesAvailable[i], monsterManager.transform).GetComponent<Unit>();
 			sourceLand.AddMonster(newMonster);
 			Land temp = sourceLand;
 
