@@ -94,13 +94,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Hobgoblin
-  Mana: 10
+  Mana: 30
   Type: 0
   UnitStats:
-    Strength: 20
-    Agility: 13
-    Defence: 13
-    Constitution: 14
+    Strength: 30
+    Agility: 20
+    Defence: 20
+    Constitution: 20
   UnitProtrait: {fileID: 21300012, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
 --- !u!61 &4763190126300688004
 BoxCollider2D:

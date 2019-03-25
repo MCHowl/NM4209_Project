@@ -94,13 +94,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Titan
-  Mana: 10
+  Mana: 60
   Type: 0
   UnitStats:
-    Strength: 11
-    Agility: 11
-    Defence: 28
-    Constitution: 25
+    Strength: 24
+    Agility: 15
+    Defence: 51
+    Constitution: 45
   UnitProtrait: {fileID: 21300024, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
 --- !u!61 &3753909022916956604
 BoxCollider2D:

@@ -94,13 +94,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Ogre
-  Mana: 10
+  Mana: 60
   Type: 0
   UnitStats:
-    Strength: 25
-    Agility: 16
-    Defence: 16
-    Constitution: 18
+    Strength: 45
+    Agility: 30
+    Defence: 30
+    Constitution: 30
   UnitProtrait: {fileID: 21300012, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
 --- !u!61 &7857364022218965521
 BoxCollider2D:

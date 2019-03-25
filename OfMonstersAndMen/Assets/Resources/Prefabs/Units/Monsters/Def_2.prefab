@@ -93,14 +93,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Rock Golem
-  Mana: 10
+  UnitName: Cyclops
+  Mana: 30
   Type: 0
   UnitStats:
-    Strength: 8
-    Agility: 8
-    Defence: 24
-    Constitution: 20
+    Strength: 16
+    Agility: 10
+    Defence: 34
+    Constitution: 30
   UnitProtrait: {fileID: 21300024, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
 --- !u!61 &7667746818221083588
 BoxCollider2D:

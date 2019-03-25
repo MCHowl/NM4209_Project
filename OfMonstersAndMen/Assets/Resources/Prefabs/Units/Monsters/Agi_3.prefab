@@ -94,11 +94,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Cerberus
-  Mana: 10
+  Mana: 60
   Type: 0
   UnitStats:
-    Strength: 18
-    Agility: 30
+    Strength: 38
+    Agility: 70
     Defence: 11
     Constitution: 16
   UnitProtrait: {fileID: 21300086, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
