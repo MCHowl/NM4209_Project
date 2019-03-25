@@ -42,8 +42,8 @@ public class ShopManager : MonoBehaviour {
 	}
 
 	public void BuyLand() {
-		if (gameController.SpendMana(landManager.landCost)) {
-			if (landManager.landCount < landManager.landList.Length) {
+		if (landManager.landCount < landManager.landList.Length) {
+			if (gameController.SpendMana(landManager.landCost)) {
 				landManager.UnlockLand(landManager.landCount);
 				landManager.landCount++;
 			}

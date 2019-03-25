@@ -36,7 +36,9 @@ public class LandManager : MonoBehaviour {
 	public void LockLand(int i) {
 		landList[i-1].isBought = false;
 		landList[i-1].UpdateSprite(TreasureSprite);
-		landList[i].UpdateSprite(LockedSprite);
+		if (i < landList.Length) {
+			landList[i].UpdateSprite(LockedSprite);
+		}
 	}
 
 	public List<Unit> GetMonsters(Land land) {
