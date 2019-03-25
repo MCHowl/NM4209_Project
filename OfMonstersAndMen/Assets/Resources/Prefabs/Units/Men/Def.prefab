@@ -93,14 +93,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Warrior
+  UnitName: Guardian
   Mana: 10
   Type: 1
   UnitStats:
-    Strength: 10
-    Agility: 10
-    Defence: 20
-    Constitution: 20
+    Strength: 5
+    Agility: 5
+    Defence: 10
+    Constitution: 10
   UnitProtrait: {fileID: 21300080, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
 --- !u!61 &8060125016991721222
 BoxCollider2D:

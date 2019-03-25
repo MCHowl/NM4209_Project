@@ -93,14 +93,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Mage
+  UnitName: Rogue
   Mana: 10
   Type: 1
   UnitStats:
-    Strength: 14
-    Agility: 28
-    Defence: 8
-    Constitution: 10
+    Strength: 7
+    Agility: 14
+    Defence: 4
+    Constitution: 5
   UnitProtrait: {fileID: 21300092, guid: 21316bace73a5284dbd90d7aacb6c822, type: 3}
 --- !u!61 &1952342946830856124
 BoxCollider2D:
