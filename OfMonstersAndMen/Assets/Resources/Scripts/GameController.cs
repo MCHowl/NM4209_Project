@@ -42,6 +42,11 @@ public class GameController : MonoBehaviour {
 	void Update() {
 		manaText.text = "Mana: " + mana;
 		waveText.text = "Wave: " + wave;
+
+		// Remove on actual build
+		if (Input.GetKeyDown(KeyCode.M)) {
+			mana += 100;
+		}
     }
 
 	public bool SpendMana(int cost) {
@@ -79,7 +84,13 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void EndWave(List<Unit> men) {
-		UpdateEvent("Wave Ended");
+		if (men.Count > 0) {
+			UpdateEvent("Wave Failed");
+		} else {
+			UpdateEvent("Wave" + wave + "Cleared!");
+		}
+		
+
 
 		waveManager.DespawnWave(men);
 		mana += EndOfWaveMana;

@@ -8,6 +8,7 @@ public class MouseManager : MonoBehaviour {
 	private GameController gameController;
 	private MonsterManager monsterManager;
 	private LandManager landManager;
+	private UnitManager unitManager;
 
 	private Vector3 originalMonsterPosition;
 	private Land originalMonsterLand;
@@ -19,10 +20,11 @@ public class MouseManager : MonoBehaviour {
 	public TextMeshProUGUI UnitDefenceField;
 	public TextMeshProUGUI UnitHealthField;
 
-    void Start() {
+    void Awake() {
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		monsterManager = GameObject.FindGameObjectWithTag("MonsterManager").GetComponent<MonsterManager>();
 		landManager = GameObject.FindGameObjectWithTag("LandManager").GetComponent<LandManager>();
+		unitManager = GameObject.FindGameObjectWithTag("UnitManager").GetComponent<UnitManager>();
     }
 
     void Update() {
@@ -50,6 +52,21 @@ public class MouseManager : MonoBehaviour {
 						Debug.LogWarning("Monster not tied to appropriate land");
 					}
 				}
+			}
+			if (Input.GetMouseButtonDown(1)) {
+				// Open Unit Manager
+				currentMonster = RaycastUnit();
+				originalMonsterLand = RaycastLand();
+
+				if (currentMonster != null && originalMonsterLand != null) {
+					unitManager.OpenUnitManager();
+					unitManager.ResetUnitManager();
+					unitManager.SetUnitManager(currentMonster, originalMonsterLand);
+				}
+
+				// Reset Values
+				currentMonster = null;
+				originalMonsterLand = null;
 			}
 		} else {
 			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

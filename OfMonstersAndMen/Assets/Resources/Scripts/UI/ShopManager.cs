@@ -105,7 +105,6 @@ public class ShopManager : MonoBehaviour {
 		} else {
 			bool canUnlock = true;
 			foreach (int check in upgradeManager.precedingUpgrades[i]) {
-				print("Checking upgrade " + check.ToString() + ", result - " + upgradeManager.isUnlocked[check]);
 				if (!upgradeManager.isUnlocked[check]) {
 					canUnlock = false;
 				}

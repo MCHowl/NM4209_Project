@@ -9,6 +9,8 @@ TagManager:
   - WaveManager
   - BattleManager
   - Shop
+  - ShopManager
+  - UnitManager
   layers:
   - Default
   - TransparentFX
