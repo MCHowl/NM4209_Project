@@ -97,7 +97,7 @@ public class ShopManager : MonoBehaviour {
 		MonsterStrength.text = monster.UnitStats.Strength.ToString();
 		MonsterAgility.text = monster.UnitStats.Agility.ToString();
 		MonsterDefence.text = monster.UnitStats.Defence.ToString();
-		MonsterHealth.text = monster.Health.ToString();
+		MonsterHealth.text = (monster.UnitStats.Constitution * 10f).ToString();
 
 		if (upgradeManager.isUnlocked[i]) {
 			BuyButton.enabled = true;

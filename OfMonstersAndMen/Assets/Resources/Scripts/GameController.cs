@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour {
 		if (men.Count > 0) {
 			UpdateEvent("Wave Failed");
 		} else {
-			UpdateEvent("Wave" + wave + "Cleared!");
+			UpdateEvent("Wave " + wave + " Cleared!");
 		}
 		
 

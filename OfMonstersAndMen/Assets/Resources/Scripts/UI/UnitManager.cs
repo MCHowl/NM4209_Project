@@ -68,6 +68,7 @@ public class UnitManager : MonoBehaviour
 
 			ResetUnitManager();
 			SetUnitManager(newMonster, sourceLand);
+			MonsterHealth.text = (newMonster.UnitStats.Constitution * 10f).ToString();
 		}
 	}
 
