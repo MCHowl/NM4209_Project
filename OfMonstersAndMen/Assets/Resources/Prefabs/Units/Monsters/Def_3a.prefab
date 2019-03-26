@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Gargoyle
-  Mana: 60
+  Mana: 100
   Type: 0
   UnitStats:
     Strength: 32

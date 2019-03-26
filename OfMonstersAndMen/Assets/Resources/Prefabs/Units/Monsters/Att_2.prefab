@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Hobgoblin
-  Mana: 30
+  Mana: 50
   Type: 0
   UnitStats:
     Strength: 30
