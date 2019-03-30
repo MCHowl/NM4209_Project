@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
+	private float waitDuration = 1;
+
 	private GameController gameController;
 
 	private void Start() {
@@ -58,8 +60,14 @@ public class BattleManager : MonoBehaviour
 				}
 			}
 			isMonsterAttack = !isMonsterAttack;
-			yield return new WaitForSeconds(1);
+			yield return new WaitForSeconds(waitDuration);
 		}
 		yield return null;
+	}
+
+	public void SetWaitDuration(float newDuration) {
+		if (waitDuration > 0) {
+			waitDuration = newDuration;
+		}
 	}
 }
