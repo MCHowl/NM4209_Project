@@ -34,6 +34,29 @@ public class WaveManager : MonoBehaviour {
 		return men;
 	}
 
+	public List<Unit> SpawnWave2() {
+		List<Unit> men = new List<Unit>();
+
+		if (gameController.wave > 9) {
+			men.Add(GetMan());
+		}
+
+		if (gameController.wave > 14) {
+			men.Add(GetMan());
+		}
+
+		if (gameController.wave > 19) {
+			men.Add(GetMan());
+		}
+
+		// Set Level
+		foreach (Unit man in men) {
+			man.SetLevel(gameController.wave / 2);
+		}
+
+		return men;
+	}
+
 	private Unit GetMan() {
 		return Instantiate(manUnits[Random.Range(0, manUnits.Length)]).GetComponent<Unit>();
 	}

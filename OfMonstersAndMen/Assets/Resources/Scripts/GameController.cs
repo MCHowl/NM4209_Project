@@ -24,7 +24,9 @@ public class GameController : MonoBehaviour {
 	public bool isWaveRunning = false;
 
 	private List<Unit> NextWave;
+	private List<Unit> NextWave2;
 	public Land WaveHoldingArea;
+	public Land WaveHoldingArea2;
 
 	public Button ShopButton;
 	public Button WaveButton;
@@ -36,7 +38,9 @@ public class GameController : MonoBehaviour {
 
 	void Start() {
 		NextWave = waveManager.SpawnWave();
+		NextWave2 = waveManager.SpawnWave2();
 		WaveHoldingArea.DisplayMen(NextWave);
+		WaveHoldingArea2.DisplayMen(NextWave2);
 	}
 
 	void Update() {
@@ -86,22 +90,52 @@ public class GameController : MonoBehaviour {
 	public void EndWave(List<Unit> men) {
 		if (men.Count > 0) {
 			UpdateEvent("Wave Failed");
+
+			waveManager.DespawnWave(men);
+
+			mana += EndOfWaveMana;
+			wave++;
+
+			NextWave = waveManager.SpawnWave();
+			NextWave2 = waveManager.SpawnWave2();
+
+			WaveHoldingArea.DisplayMen(NextWave);
+			WaveHoldingArea2.DisplayMen(NextWave2);
+
+			isWaveRunning = false;
+
+			WaveButton.enabled = true;
+			ShopButton.enabled = true;
 		} else {
-			UpdateEvent("Wave " + wave + " Cleared!");
+			waveManager.DespawnWave(men);
+
+			// Check if second part of wave is still coming
+			if (NextWave2.Count > 0) {
+				landManager.StartWave(NextWave2);
+			// Else end the wave
+			} else {
+				UpdateEvent("Wave " + wave + " Cleared!");
+
+				mana += EndOfWaveMana;
+				wave++;
+
+				NextWave = waveManager.SpawnWave();
+				NextWave2 = waveManager.SpawnWave2();
+
+				WaveHoldingArea.DisplayMen(NextWave);
+				WaveHoldingArea2.DisplayMen(NextWave2);
+
+				isWaveRunning = false;
+
+				WaveButton.enabled = true;
+				ShopButton.enabled = true;
+			}
 		}
-		
 
 
-		waveManager.DespawnWave(men);
-		mana += EndOfWaveMana;
-		wave++;
 
-		NextWave = waveManager.SpawnWave();
-		WaveHoldingArea.DisplayMen(NextWave);
-		isWaveRunning = false;
 
-		WaveButton.enabled = true;
-		ShopButton.enabled = true;
+
 	}
 
 	public void UpdateEvent(string incomingText) {
