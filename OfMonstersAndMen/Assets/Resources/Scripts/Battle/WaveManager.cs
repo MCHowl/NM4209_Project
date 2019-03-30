@@ -15,20 +15,26 @@ public class WaveManager : MonoBehaviour {
 	public List<Unit> SpawnWave() {
 		List<Unit> men = new List<Unit>();
 
-		// Spawn Men based on Wave
-		men.Add(GetMan());
-
-		if (gameController.wave > 2) {
+		if (gameController.wave < 50) {
+			// Spawn Men based on Wave
 			men.Add(GetMan());
-		}
 
-		if (gameController.wave > 4) {
-			men.Add(GetMan());
-		}
+			if (gameController.wave > 2) {
+				men.Add(GetMan());
+			}
 
-		// Set Level
-		foreach (Unit man in men) {
-			man.SetLevel(gameController.wave / 2);
+			if (gameController.wave > 4) {
+				men.Add(GetMan());
+			}
+
+			// Set Level
+			foreach (Unit man in men) {
+				man.SetLevel(gameController.wave / 2);
+			}
+
+		} else if (gameController.wave == 50) {
+			men.Add(Instantiate(manUnits[0]).GetComponent<Unit>());
+			men[0].SetLevel(75);
 		}
 
 		return men;
@@ -37,21 +43,23 @@ public class WaveManager : MonoBehaviour {
 	public List<Unit> SpawnWave2() {
 		List<Unit> men = new List<Unit>();
 
-		if (gameController.wave > 9) {
-			men.Add(GetMan());
-		}
+		if (gameController.wave < 50) {
+			if (gameController.wave > 9) {
+				men.Add(GetMan());
+			}
 
-		if (gameController.wave > 14) {
-			men.Add(GetMan());
-		}
+			if (gameController.wave > 14) {
+				men.Add(GetMan());
+			}
 
-		if (gameController.wave > 19) {
-			men.Add(GetMan());
-		}
+			if (gameController.wave > 19) {
+				men.Add(GetMan());
+			}
 
-		// Set Level
-		foreach (Unit man in men) {
-			man.SetLevel(gameController.wave / 2);
+			// Set Level
+			foreach (Unit man in men) {
+				man.SetLevel(gameController.wave / 2);
+			}
 		}
 
 		return men;

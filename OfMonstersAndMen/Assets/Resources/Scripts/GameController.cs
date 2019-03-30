@@ -31,6 +31,9 @@ public class GameController : MonoBehaviour {
 	public Button ShopButton;
 	public Button WaveButton;
 
+	public Canvas GameLostCanvas;
+	public Canvas GameWonCanvas;
+
 	void Awake() {
 		waveManager = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveManager>();
 		landManager = GameObject.FindGameObjectWithTag("LandManager").GetComponent<LandManager>();
@@ -92,6 +95,9 @@ public class GameController : MonoBehaviour {
 			UpdateEvent("Wave Failed");
 
 			waveManager.DespawnWave(men);
+			if (NextWave2.Count > 0) {
+				waveManager.DespawnWave(NextWave2);
+			}
 
 			mana += EndOfWaveMana;
 			wave++;
@@ -116,26 +122,26 @@ public class GameController : MonoBehaviour {
 			} else {
 				UpdateEvent("Wave " + wave + " Cleared!");
 
-				mana += EndOfWaveMana;
-				wave++;
+				// Check for final wave
+				if (wave == 50) {
+					GameWonCanvas.enabled = true;
+				} else {
+					mana += EndOfWaveMana;
+					wave++;
 
-				NextWave = waveManager.SpawnWave();
-				NextWave2 = waveManager.SpawnWave2();
+					NextWave = waveManager.SpawnWave();
+					NextWave2 = waveManager.SpawnWave2();
 
-				WaveHoldingArea.DisplayMen(NextWave);
-				WaveHoldingArea2.DisplayMen(NextWave2);
+					WaveHoldingArea.DisplayMen(NextWave);
+					WaveHoldingArea2.DisplayMen(NextWave2);
 
-				isWaveRunning = false;
+					isWaveRunning = false;
 
-				WaveButton.enabled = true;
-				ShopButton.enabled = true;
+					WaveButton.enabled = true;
+					ShopButton.enabled = true;
+				}
 			}
 		}
-
-
-
-
-
 	}
 
 	public void UpdateEvent(string incomingText) {
