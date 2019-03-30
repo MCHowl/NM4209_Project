@@ -36,8 +36,10 @@ public class ShopManager : MonoBehaviour {
     }
 
 	public void BuyUnit() {
-		if (gameController.SpendMana(selectedMonster.GetComponent<Unit>().Mana)) {
-			monsterManager.CreateUnit(selectedMonster);
+		if (monsterManager.Inventory.monsterUnits.Count < monsterManager.Inventory.landLimit) {
+			if (gameController.SpendMana(selectedMonster.GetComponent<Unit>().Mana)) {
+				monsterManager.CreateUnit(selectedMonster);
+			}
 		}
 	}
 
