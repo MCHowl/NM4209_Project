@@ -12,9 +12,9 @@ public class BattleManager : MonoBehaviour
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 
-	public static float StrengthModifier = 1.5f;
-	public static float AgilityModifier = 1f;
-	public static float DefenseModifier = 0.75f;
+	public static float StrengthModifier = 0.8f;
+	public static float AgilityModifier = 0.6f;
+	public static float DefenseModifier = 0.8f;
 
 	public void Fight(Unit attacker, Unit defender) {
 		float incomingDamage = attacker.GetAttackValue() * StrengthModifier;

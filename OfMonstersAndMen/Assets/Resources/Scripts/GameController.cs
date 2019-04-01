@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour {
 	private WaveManager waveManager;
 	private LandManager landManager;
 
-	public int EndOfWaveMana = 20;
+	public int EndOfWaveMana = 5;
 	[HideInInspector]
 	public int mana = 30;
 	[HideInInspector]
@@ -98,8 +98,8 @@ public class GameController : MonoBehaviour {
 			if (NextWave2.Count > 0) {
 				waveManager.DespawnWave(NextWave2);
 			}
-
-			mana += EndOfWaveMana;
+			
+			mana += EndOfWaveMana * (landManager.landCount + 1);
 			wave++;
 
 			NextWave = waveManager.SpawnWave();
@@ -126,7 +126,7 @@ public class GameController : MonoBehaviour {
 				if (wave == 50) {
 					GameWonCanvas.enabled = true;
 				} else {
-					mana += EndOfWaveMana;
+					mana += EndOfWaveMana * (landManager.landCount + 1);
 					wave++;
 
 					NextWave = waveManager.SpawnWave();
