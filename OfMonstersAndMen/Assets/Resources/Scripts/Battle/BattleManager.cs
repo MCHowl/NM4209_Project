@@ -12,21 +12,21 @@ public class BattleManager : MonoBehaviour
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 
-	public static float StrengthModifier = 0.8f;
-	public static float AgilityModifier = 0.6f;
-	public static float DefenseModifier = 0.3f;
+	public static float StrengthModifier = 1.5f;
+	public static float AgilityModifier = 1f;
+	public static float DefenseModifier = 0.75f;
 
 	public void Fight(Unit attacker, Unit defender) {
 		float incomingDamage = attacker.GetAttackValue() * StrengthModifier;
 		float criticalDamage = attacker.GetCriticalValue();
-		float damageResisted = defender.GetDefenseValue() * DefenseModifier;
+		float damageResistance =  1 - DefenseModifier * (Mathf.Min(1, (defender.GetDefenseValue() / 100)));
 
 		if (attacker.GetCriticalChance() <= defender.GetCriticalChance()) {
 			criticalDamage = 0;
 		}
 
 		// Prevent negative damage and Round to prevent floating point errors
-		float finalDamage = Mathf.Round(Mathf.Max(0, incomingDamage + criticalDamage - damageResisted) * 10f) / 10f;
+		float finalDamage = Mathf.Round(Mathf.Max(0, (incomingDamage + criticalDamage) * damageResistance) * 10f) / 10f;
 
 		defender.TakeDamage(finalDamage);
 		if (attacker.Type == Unit.UnitType.Man) {
