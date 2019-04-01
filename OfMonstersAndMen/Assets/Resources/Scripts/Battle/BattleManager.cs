@@ -19,7 +19,7 @@ public class BattleManager : MonoBehaviour
 	public void Fight(Unit attacker, Unit defender) {
 		float incomingDamage = attacker.GetAttackValue() * StrengthModifier;
 		float criticalDamage = attacker.GetCriticalValue();
-		float damageResistance =  1 - DefenseModifier * (Mathf.Min(1, (defender.GetDefenseValue() / 100)));
+		float damageResistance =  1f - DefenseModifier * (Mathf.Min(1, ((float)defender.GetDefenseValue() / 100f)));
 
 		if (attacker.GetCriticalChance() <= defender.GetCriticalChance()) {
 			criticalDamage = 0;
