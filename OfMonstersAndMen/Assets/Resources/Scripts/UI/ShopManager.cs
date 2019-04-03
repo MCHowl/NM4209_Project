@@ -21,6 +21,9 @@ public class ShopManager : MonoBehaviour {
 
 	public Button BuyButton;
 	public Button UnlockButton;
+	public TextMeshProUGUI LandBuyText;
+	public TextMeshProUGUI LandSellText;
+	public TextMeshProUGUI LandBonusText;
 
 	int selectedIndex;
 	GameObject selectedMonster;
@@ -45,11 +48,12 @@ public class ShopManager : MonoBehaviour {
 
 	public void BuyLand() {
 		if (landManager.landCount < landManager.landList.Length) {
-			if (gameController.SpendMana(landManager.landCost)) {
+			if (gameController.SpendMana(landManager.landCost[landManager.landCount - 1])) {
 				landManager.UnlockLand(landManager.landCount);
 				landManager.landCount++;
 			}
 		}
+		SetLand();
 	}
 
 	public void SellLand() {
@@ -63,11 +67,12 @@ public class ShopManager : MonoBehaviour {
 					monsterManager.Inventory.AddMonster(monster);
 				}
 
-				gameController.GainMana(landManager.landCost * 2 / 3);
+				gameController.GainMana(landManager.landSale[landManager.landCount - 1]);
 				landManager.LockLand(landManager.landCount);
 				landManager.landCount--;
 			}
 		}
+		SetLand();
 	}
 
 	public void BuyUpgrade() {
@@ -81,6 +86,7 @@ public class ShopManager : MonoBehaviour {
 	}
 
 	public void OpenShop() {
+		SetLand();
 		shopCanvas.enabled = true;
 	}
 
@@ -116,6 +122,22 @@ public class ShopManager : MonoBehaviour {
 				UnlockButton.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock (" + upgradeManager.unlockCost[i].ToString() + ")";
 			}
 		}
+	}
+
+	public void SetLand() {
+		if (landManager.landCost[landManager.landCount - 1] == int.MaxValue) {
+			LandBuyText.text = "---";
+		} else {
+			LandBuyText.text = "Buy Land (" + landManager.landCost[landManager.landCount - 1] + ")";
+		}
+
+		if (landManager.landSale[landManager.landCount - 1] == int.MaxValue) {
+			LandSellText.text = "---";
+		} else {
+			LandSellText.text = "Sell Land (" + landManager.landSale[landManager.landCount - 1] + ")";
+		}
+
+		LandBonusText.text = "Current End of Wave Bonus: " + landManager.landBonus[landManager.landCount - 1];
 	}
 
 	public void ResetShop() {

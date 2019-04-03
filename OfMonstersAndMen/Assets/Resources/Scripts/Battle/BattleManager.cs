@@ -14,7 +14,7 @@ public class BattleManager : MonoBehaviour
 
 	public static float StrengthModifier = 0.8f;
 	public static float AgilityModifier = 0.6f;
-	public static float DefenseModifier = 0.8f;
+	public static float DefenseModifier = 0.4f;
 
 	public void Fight(Unit attacker, Unit defender) {
 		float incomingDamage = attacker.GetAttackValue() * StrengthModifier;
