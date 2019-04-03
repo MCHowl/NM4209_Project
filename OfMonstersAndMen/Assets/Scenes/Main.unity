@@ -3684,7 +3684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50988d9ab32d3f846800229e964ac4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  landCount: 3
+  landCount: 1
   landCost: 
   landSale: 
   landBonus: 

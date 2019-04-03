@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Titan
-  Mana: 100
+  Mana: 50
   Type: 0
   UnitStats:
     Strength: 24

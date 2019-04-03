@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class LandManager : MonoBehaviour {
 
-	public int landCount = 3;
-	//public int landCost = 30;
+	public int landCount = 1;
 
 	public int[] landCost;
 	public int[] landSale;
