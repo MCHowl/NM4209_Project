@@ -12,10 +12,6 @@ public class LandManager : MonoBehaviour {
 
 	public Land[] landList;
 
-	public Sprite UnlockedSprite;
-	public Sprite LockedSprite;
-	public Sprite TreasureSprite;
-
 	private GameController gameController;
 	private BattleManager battleManager;
 
@@ -34,19 +30,23 @@ public class LandManager : MonoBehaviour {
 
 	public void UnlockLand(int i) {
 		landList[i].isBought = true;
-		landList[i].UpdateSprite(UnlockedSprite);
+		landList[i].UpdateSprite(landList[i].unlockedSprite);
 
-		if (i < landList.Length - 1) {
-			landList[i+1].UpdateSprite(TreasureSprite);
-		}
+		// Treasure
+		//if (i < landList.Length - 1) {
+		//	landList[i+1].UpdateSprite(landList[i+1].unlockedSprite);
+		//}
 	}
 
 	public void LockLand(int i) {
 		landList[i-1].isBought = false;
-		landList[i-1].UpdateSprite(TreasureSprite);
-		if (i < landList.Length) {
-			landList[i].UpdateSprite(LockedSprite);
-		}
+
+		// Treasure
+		landList[i-1].UpdateSprite(landList[i-1].lockedSprite);
+
+		//if (i < landList.Length) {
+		//	landList[i].UpdateSprite(landList[i].lockedSprite);
+		//}
 	}
 
 	public List<Unit> GetMonsters(Land land) {

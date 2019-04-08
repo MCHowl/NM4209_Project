@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Land : MonoBehaviour {
-
+	public Sprite lockedSprite;
 	public Sprite unlockedSprite;
 	public bool isBought = false;
 
