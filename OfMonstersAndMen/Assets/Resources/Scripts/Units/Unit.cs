@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour {
 	public enum UnitType { Monster, Man };
+	public enum StatType { Strength, Agility, Defence };
 
 	[System.Serializable]
 	public class Stats {
@@ -26,6 +27,7 @@ public class Unit : MonoBehaviour {
 	public UnitType Type;
 	public Stats UnitStats;
 	public Sprite UnitProtrait;
+	public StatType PrimaryStat;
 
 	// The only really important thing
 	public float Health { get; set; }

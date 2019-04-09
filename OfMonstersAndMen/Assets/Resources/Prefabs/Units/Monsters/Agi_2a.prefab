@@ -102,6 +102,7 @@ MonoBehaviour:
     Defence: 16
     Constitution: 16
   UnitProtrait: {fileID: 21300000, guid: 78b3871b85da87c45a1b5ae788aab34d, type: 3}
+  PrimaryStat: 1
 --- !u!61 &114349052514620347
 BoxCollider2D:
   m_ObjectHideFlags: 0
