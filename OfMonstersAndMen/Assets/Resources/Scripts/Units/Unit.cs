@@ -52,11 +52,25 @@ public class Unit : MonoBehaviour {
 
 	public void SetLevel(int level) {
 		if (level >= 0 && Type == UnitType.Man) {
-			UnitStats.Strength += level;
-			UnitStats.Agility += level;
-			UnitStats.Defence += level;
-			UnitStats.Constitution += level;
+			switch (PrimaryStat) {
+				case (StatType.Agility):
+					UnitStats.Strength += level;
+					UnitStats.Agility += level * 2;
+					UnitStats.Defence += level;
+					break;
+				case (StatType.Defence):
+					UnitStats.Strength += level;
+					UnitStats.Agility += level;
+					UnitStats.Defence += level * 2;
+					break;
+				case (StatType.Strength):
+					UnitStats.Strength += level * 2;
+					UnitStats.Agility += level;
+					UnitStats.Defence += level;
+					break;
+			}
 
+			UnitStats.Constitution += level;
 			Health = UnitStats.Constitution * 10;
 		}
 	}
