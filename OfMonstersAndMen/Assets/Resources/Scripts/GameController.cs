@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour {
 	[HideInInspector]
 	public bool isWaveRunning = false;
 
+	private AudioSource battleAudio;
+
 	private List<Unit> NextWave;
 	private List<Unit> NextWave2;
 	public Land WaveHoldingArea;
@@ -37,6 +39,7 @@ public class GameController : MonoBehaviour {
 	void Awake() {
 		waveManager = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveManager>();
 		landManager = GameObject.FindGameObjectWithTag("LandManager").GetComponent<LandManager>();
+		battleAudio = GameObject.FindGameObjectWithTag("AudioManager").transform.Find("Battle").GetComponent<AudioSource>();
     }
 
 	void Start() {
@@ -86,6 +89,7 @@ public class GameController : MonoBehaviour {
 			ShopButton.enabled = false;
 
 			isWaveRunning = true;
+			battleAudio.Play();
 			landManager.StartWave(NextWave);
 		}
 	}
@@ -93,6 +97,7 @@ public class GameController : MonoBehaviour {
 	public void EndWave(List<Unit> men) {
 		if (men.Count > 0) {
 			UpdateEvent("Wave Failed");
+			battleAudio.Stop();
 
 			waveManager.DespawnWave(men);
 			if (NextWave2.Count > 0) {
@@ -121,6 +126,7 @@ public class GameController : MonoBehaviour {
 			// Else end the wave
 			} else {
 				UpdateEvent("Wave " + wave + " Cleared!");
+				battleAudio.Stop();
 
 				// Check for final wave
 				if (wave == 50) {
