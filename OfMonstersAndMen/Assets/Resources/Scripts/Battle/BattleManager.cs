@@ -88,7 +88,7 @@ public class BattleManager : MonoBehaviour
 				}
 
 				Fight(monsterUnit, manUnit);
-				if (manUnit.Health < 0) {
+				if (manUnit.Health <= 0) {
 					gameController.UpdateEvent("<color=\"red\">" + manUnit.UnitName + "</color> defeated");
 					gameController.ConvertToMana(manUnit);
 					men.Remove(manUnit);
@@ -105,7 +105,7 @@ public class BattleManager : MonoBehaviour
 				}
 
 				Fight(manUnit, monsterUnit);
-				if (monsterUnit.Health < 0) {
+				if (monsterUnit.Health <= 0) {
 					gameController.UpdateEvent("<color=\"green\">" + monsterUnit.UnitName + "</color> defeated");
 					monsters.Remove(monsterUnit);
 					monsterUnit.DestroyUnit();

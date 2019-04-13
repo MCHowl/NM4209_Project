@@ -103,7 +103,7 @@ public class Unit : MonoBehaviour {
 	}
 
 	public void TakeDamage(float damage) {
-		Health -= damage;
+		Health = Mathf.Max(Health - damage, 0);
 		Health = Mathf.Round(Health * 10) / 10f;
 	}
 }
