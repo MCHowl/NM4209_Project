@@ -66,12 +66,22 @@ public class BattleManager : MonoBehaviour
 
 	public IEnumerator Battle(List<Unit> monsters, List<Unit> men) {
 		bool isMonsterAttack = true;
+		int monsterAttackCount = 0;
+		int manAttackCount = 0;
 
 		while (monsters.Count > 0 && men.Count > 0) {
-			Unit monsterUnit = monsters[Random.Range(0, monsters.Count)];
-			Unit manUnit = men[Random.Range(0, men.Count)];
+			Unit monsterUnit;// = monsters[monsterAttackCount % monsters.Count];
+			Unit manUnit;// = men[manAttackCount % men.Count];
 
 			if (isMonsterAttack) {
+				monsterUnit = monsters[monsterAttackCount % monsters.Count];
+
+				if (monsterAttackCount % monsters.Count >= men.Count) {
+					manUnit = men[Random.Range(0, men.Count)];
+				} else {
+					manUnit = men[monsterAttackCount % monsters.Count];
+				}
+
 				Fight(monsterUnit, manUnit);
 				if (manUnit.Health < 0) {
 					gameController.UpdateEvent("<color=\"red\">" + manUnit.UnitName + "</color> defeated");
@@ -79,13 +89,23 @@ public class BattleManager : MonoBehaviour
 					men.Remove(manUnit);
 					manUnit.DestroyUnit();
 				}
+				monsterAttackCount++;
 			} else {
+				manUnit = men[manAttackCount % men.Count];
+
+				if (manAttackCount % men.Count >= monsters.Count) {
+					monsterUnit = monsters[Random.Range(0, monsters.Count)];
+				} else {
+					monsterUnit = monsters[manAttackCount % men.Count];
+				}
+
 				Fight(manUnit, monsterUnit);
 				if (monsterUnit.Health < 0) {
 					gameController.UpdateEvent("<color=\"green\">" + monsterUnit.UnitName + "</color> defeated");
 					monsters.Remove(monsterUnit);
 					monsterUnit.DestroyUnit();
 				}
+				manAttackCount++;
 			}
 			isMonsterAttack = !isMonsterAttack;
 			yield return new WaitForSeconds(waitDuration);
