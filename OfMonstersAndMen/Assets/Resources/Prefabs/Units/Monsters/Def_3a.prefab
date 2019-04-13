@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Gargoyle
+  UnitDescription: Gargoyle is the stronger version of the Horned Golem, forgoing
+    some of its defenses to deal more damage to its enemies
   Mana: 50
   Type: 0
   UnitStats:

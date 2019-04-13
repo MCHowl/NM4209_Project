@@ -94,7 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Hound
-  Mana: 10
+  UnitDescription: The Hound is the basic unit for the agility monsters. It excels
+    at fighting the damage dealers with its critical strikes
+  Mana: 5
   Type: 0
   UnitStats:
     Strength: 12

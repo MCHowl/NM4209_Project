@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Hobgoblin Berserker
+  UnitDescription: The Hobgoblin Berserker is the strongest of all goblins with unmatched
+    strength to decimate its foes
   Mana: 50
   Type: 0
   UnitStats:

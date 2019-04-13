@@ -23,6 +23,7 @@ public class Unit : MonoBehaviour {
 
 	// Initialisation Values
 	public string UnitName;
+	public string UnitDescription;
 	public int Mana = 10;
 	public UnitType Type;
 	public Stats UnitStats;

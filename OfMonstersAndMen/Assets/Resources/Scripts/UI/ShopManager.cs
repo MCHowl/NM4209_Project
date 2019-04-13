@@ -14,6 +14,8 @@ public class ShopManager : MonoBehaviour {
 
 	public Image MonsterPortrait;
 	public TextMeshProUGUI MonsterName;
+	public TextMeshProUGUI MonsterDescription;
+	public TextMeshProUGUI MonsterPrimaryStat;
 	public TextMeshProUGUI MonsterStrength;
 	public TextMeshProUGUI MonsterAgility;
 	public TextMeshProUGUI MonsterDefence;
@@ -102,10 +104,29 @@ public class ShopManager : MonoBehaviour {
 
 		MonsterPortrait.sprite = monster.UnitProtrait;
 		MonsterName.text = monster.UnitName;
+		MonsterDescription.text = monster.UnitDescription;
 		MonsterStrength.text = monster.UnitStats.Strength.ToString();
 		MonsterAgility.text = monster.UnitStats.Agility.ToString();
 		MonsterDefence.text = monster.UnitStats.Defence.ToString();
 		MonsterHealth.text = (monster.UnitStats.Constitution * 10f).ToString();
+
+		switch (monster.PrimaryStat) {
+			case (Unit.StatType.Agility):
+				MonsterPrimaryStat.text = "Primary Stat: <b>Agility</b>\n\n";
+				MonsterPrimaryStat.text += "Agility enables units to land critical hits on their opponents\n\n";
+				MonsterPrimaryStat.text += "Strong versus Strength units";
+				break;
+			case (Unit.StatType.Strength):
+				MonsterPrimaryStat.text = "Primary Stat: <b>Strength</b>\n\n";
+				MonsterPrimaryStat.text += "Strength determines the amount of damage of each hit the unit is able to dish out to opponents\n\n";
+				MonsterPrimaryStat.text += "Strong versus Defence units";
+				break;
+			case (Unit.StatType.Defence):
+				MonsterPrimaryStat.text = "Primary Stat: <b>Defence</b>\n\n";
+				MonsterPrimaryStat.text += "Defence helps to reduce the damage of incoming attacks, allowing units to survive longer\n\n";
+				MonsterPrimaryStat.text += "Strong versus Agility units";
+				break;
+		}
 
 		if (upgradeManager.isUnlocked[i]) {
 			BuyButton.enabled = true;
@@ -142,10 +163,13 @@ public class ShopManager : MonoBehaviour {
 
 	public void ResetShop() {
 		MonsterName.text = "";
+		MonsterDescription.text = "";
 		MonsterStrength.text = "";
 		MonsterAgility.text = "";
 		MonsterDefence.text = "";
 		MonsterHealth.text = "";
+
+		MonsterPrimaryStat.text = "";
 
 		MonsterPortrait.sprite = null;
 

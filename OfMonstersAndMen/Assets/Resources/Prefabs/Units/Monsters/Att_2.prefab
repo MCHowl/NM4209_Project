@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Goblin Guard
+  UnitDescription: The Goblin Guard equips itself with a shield and armor to take
+    on adventurers with an all-rounded fighting style
   Mana: 25
   Type: 0
   UnitStats:

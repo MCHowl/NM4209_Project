@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Spiked Hound
+  UnitDescription: The Spiked Hound grows spikes and blades on its body, allowing
+    it to deal even more damage with its critical strikes
   Mana: 25
   Type: 0
   UnitStats:

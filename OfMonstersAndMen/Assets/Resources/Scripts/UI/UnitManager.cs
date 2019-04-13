@@ -18,7 +18,7 @@ public class UnitManager : MonoBehaviour
 	public TextMeshProUGUI MonsterDefence;
 	public TextMeshProUGUI MonsterHealth;
 
-	public Button Heal;
+	//public Button Heal;
 	public Button Sell;
 	public Button Upgrade1;
 	public Button Upgrade2;
@@ -44,8 +44,8 @@ public class UnitManager : MonoBehaviour
 			selectedMonster.Health = selectedMonster.UnitStats.Constitution * 10;
 			MonsterHealth.text = selectedMonster.Health.ToString();
 
-			Heal.enabled = false;
-			Heal.GetComponentInChildren<TextMeshProUGUI>().text = "Cannot Heal";
+			//Heal.enabled = false;
+			//Heal.GetComponentInChildren<TextMeshProUGUI>().text = "Cannot Heal";
 
 		}
 	}
@@ -95,8 +95,8 @@ public class UnitManager : MonoBehaviour
 		Sell.GetComponentInChildren<TextMeshProUGUI>().text = "Sell (" + (int)(selectedMonster.Mana * (selectedMonster.Health / (selectedMonster.UnitStats.Constitution * 10f)) * 0.75f) + ")";
 
 		if (selectedMonster.Health < selectedMonster.UnitStats.Constitution * 10) {
-			Heal.enabled = true;
-			Heal.GetComponentInChildren<TextMeshProUGUI>().text = "Heal (" + selectedMonster.Mana/2 + ")";
+			//Heal.enabled = true;
+			//Heal.GetComponentInChildren<TextMeshProUGUI>().text = "Heal (" + selectedMonster.Mana/2 + ")";
 		}
 
 		for (int i = 0; i < upgradeManager.UnitUpgrades.Length; i++) {
@@ -130,9 +130,9 @@ public class UnitManager : MonoBehaviour
 
 		MonsterPortrait.sprite = null;
 
-		Heal.GetComponentInChildren<TextMeshProUGUI>().text = "---";
-		Heal.enabled = false;
-		Heal.GetComponentInChildren<TextMeshProUGUI>().text = "Cannot Heal";
+		//Heal.GetComponentInChildren<TextMeshProUGUI>().text = "---";
+		//Heal.enabled = false;
+		//Heal.GetComponentInChildren<TextMeshProUGUI>().text = "Cannot Heal";
 		Upgrade1.enabled = false;
 		Upgrade1.GetComponentInChildren<TextMeshProUGUI>().text = "---";
 		Upgrade2.enabled = false;

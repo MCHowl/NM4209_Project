@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Hobgoblin Champion
+  UnitDescription: Hobgoblin Champions are the sturdiest in the goblin army, training
+    themselves further in a well-balanced fighting style
   Mana: 50
   Type: 0
   UnitStats:

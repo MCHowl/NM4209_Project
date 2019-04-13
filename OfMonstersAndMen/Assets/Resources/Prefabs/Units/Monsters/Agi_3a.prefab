@@ -94,6 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Manticore
+  UnitDescription: The Manticore is the tankier version of Cerberus, forgoing some
+    of its agility stats, the stronger Manticore is bound to stay in your dungeon
+    longer
   Mana: 50
   Type: 0
   UnitStats:

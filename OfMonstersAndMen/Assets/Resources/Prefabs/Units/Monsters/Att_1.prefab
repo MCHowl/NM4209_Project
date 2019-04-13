@@ -94,7 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Goblin
-  Mana: 10
+  UnitDescription: Goblin, the basic unit for the strength monsters excels at fighting
+    the slower and tankier units
+  Mana: 5
   Type: 0
   UnitStats:
     Strength: 15

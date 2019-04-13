@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Cerberus
+  UnitDescription: Cerberus brings the big criticals to your dungeon. It is the highest
+    hitting monster with massive critical strikes. Beware, critical strikes may fail
   Mana: 50
   Type: 0
   UnitStats:

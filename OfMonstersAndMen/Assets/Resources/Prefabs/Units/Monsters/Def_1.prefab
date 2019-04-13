@@ -94,7 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Golem
-  Mana: 10
+  UnitDescription: Golem, the basic unit for the defense monsters. It excels at taking
+    hits from enemies and crushing those pesky rogues
+  Mana: 5
   Type: 0
   UnitStats:
     Strength: 8

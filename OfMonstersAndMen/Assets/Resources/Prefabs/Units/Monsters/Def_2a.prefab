@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Horned Golem
+  UnitDescription: The Horned Golem gains sharper claws, allowing it to deal more
+    damage at the expense of its defense
   Mana: 25
   Type: 0
   UnitStats:

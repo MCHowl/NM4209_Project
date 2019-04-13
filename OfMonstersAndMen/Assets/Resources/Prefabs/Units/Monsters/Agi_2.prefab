@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Hell Hound
+  UnitDescription: The Hell Hound is equipped in hellish armor, allowing it to survive
+    more blows than the average Hound
   Mana: 25
   Type: 0
   UnitStats:

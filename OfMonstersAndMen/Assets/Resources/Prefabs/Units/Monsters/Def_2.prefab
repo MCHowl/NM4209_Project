@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Cyclops
+  UnitDescription: The Cyclops hardens its defense and is yet a studier rock. It is
+    able to take more hits than you expect it to take
   Mana: 25
   Type: 0
   UnitStats:

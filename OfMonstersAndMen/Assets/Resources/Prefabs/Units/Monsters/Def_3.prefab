@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Titan
+  UnitDescription: Titan is the final form for the defense tree. It is the ultimate
+    defense monster capable of soaking up a lot of damage
   Mana: 50
   Type: 0
   UnitStats:
