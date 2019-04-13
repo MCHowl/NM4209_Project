@@ -35,10 +35,10 @@ public class UpgradeManager : MonoBehaviour
 				unlockCost[i] = 0;
 			} else if (i % 5 == 1 || i % 5 == 2) {
 				// Tier 2 Unlock Cost
-				unlockCost[i] = 50;
+				unlockCost[i] = 150;
 			} else {
 				// Tier 3 Unlock Cost
-				unlockCost[i] = 100;
+				unlockCost[i] = 300;
 			}
 		}
 	}

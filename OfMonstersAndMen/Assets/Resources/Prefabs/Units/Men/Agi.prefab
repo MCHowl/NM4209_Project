@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitName: Rogue
   UnitDescription: Strong Agility Unit
-  Mana: 15
+  Mana: 20
   Type: 1
   UnitStats:
     Strength: 7

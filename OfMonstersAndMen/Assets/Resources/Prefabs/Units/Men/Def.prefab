@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitName: Guardian
   UnitDescription: Strong Defence Unit
-  Mana: 15
+  Mana: 20
   Type: 1
   UnitStats:
     Strength: 5
