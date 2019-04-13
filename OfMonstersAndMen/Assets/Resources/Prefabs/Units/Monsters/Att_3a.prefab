@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Behemoth
+  UnitName: Hobgoblin Berserker
   Mana: 50
   Type: 0
   UnitStats:
@@ -101,7 +101,8 @@ MonoBehaviour:
     Agility: 20
     Defence: 20
     Constitution: 20
-  UnitProtrait: {fileID: 21300000, guid: 9fd210de2f800954a88d34dbc6375f09, type: 3}
+  UnitProtrait: {fileID: 21300000, guid: bb1b385a3207f074886eb45d679d206a, type: 3}
+  PrimaryStat: 0
 --- !u!61 &7857364022218965521
 BoxCollider2D:
   m_ObjectHideFlags: 0

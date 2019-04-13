@@ -101,7 +101,7 @@ MonoBehaviour:
     Agility: 14
     Defence: 4
     Constitution: 5
-  UnitProtrait: {fileID: 21300000, guid: 284fcc5686f2ac643b61e67fc624f1ed, type: 3}
+  UnitProtrait: {fileID: 21300000, guid: 48877278935c12145bf31bbefb16c596, type: 3}
   PrimaryStat: 1
 --- !u!61 &1952342946830856124
 BoxCollider2D:

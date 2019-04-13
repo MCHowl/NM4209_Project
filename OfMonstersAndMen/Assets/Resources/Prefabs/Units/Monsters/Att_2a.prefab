@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Minotaur
+  UnitName: Goblin Warrior
   Mana: 25
   Type: 0
   UnitStats:
@@ -101,7 +101,8 @@ MonoBehaviour:
     Agility: 15
     Defence: 15
     Constitution: 15
-  UnitProtrait: {fileID: 21300000, guid: 24e50ae99dd38094a847d735389241b0, type: 3}
+  UnitProtrait: {fileID: 21300000, guid: 8dcc695fa0279a040bb006b3c1ca7f84, type: 3}
+  PrimaryStat: 0
 --- !u!61 &4763190126300688004
 BoxCollider2D:
   m_ObjectHideFlags: 0

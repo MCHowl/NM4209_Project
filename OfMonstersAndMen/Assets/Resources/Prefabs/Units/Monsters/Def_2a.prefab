@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Stone Golem
+  UnitName: Horned Golem
   Mana: 25
   Type: 0
   UnitStats:
@@ -101,7 +101,7 @@ MonoBehaviour:
     Agility: 17
     Defence: 28
     Constitution: 25
-  UnitProtrait: {fileID: 21300000, guid: 17c9ff419160bb84cad79379274438ec, type: 3}
+  UnitProtrait: {fileID: 21300000, guid: 68b15be56fdb78f4496fd57e309d61a9, type: 3}
   PrimaryStat: 2
 --- !u!61 &7667746818221083588
 BoxCollider2D:

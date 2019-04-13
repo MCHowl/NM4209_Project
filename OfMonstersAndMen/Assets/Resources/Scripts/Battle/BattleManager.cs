@@ -13,15 +13,15 @@ public class BattleManager : MonoBehaviour
 	}
 
 	public static float StrengthModifier = 0.8f;
-	public static float AgilityModifier = 0.6f;
-	public static float DefenseModifier = 0.4f;
+	public static float AgilityModifier = 0.3f;
+	public static float DefenseModifier = 0.5f;
 
 	private static float BonusMultiplier = 1.2f;
 	private static float WeaknessMultiplier = 0.8f;
 
 	public void Fight(Unit attacker, Unit defender) {
 		float incomingDamage = attacker.GetAttackValue() * StrengthModifier;
-		float criticalDamage = attacker.GetCriticalValue();
+		float criticalDamage = attacker.GetCriticalValue() * AgilityModifier;
 		float damageResistance =  1f - DefenseModifier * (Mathf.Min(1, ((float)defender.GetDefenseValue() / 100f)));
 
 		if (attacker.GetCriticalChance() <= defender.GetCriticalChance()) {
@@ -31,8 +31,7 @@ public class BattleManager : MonoBehaviour
 		// Prevent negative damage and Round to prevent floating point errors
 		float finalDamage = Mathf.Round(Mathf.Max(0, (incomingDamage + criticalDamage) * damageResistance) * 10f) / 10f;
 
-		//Str does 1.2 to Def, Agi does 1.2 to Str, Def does 1.2 to Agi
-		//Str does 0.8 to Agi, Agi does 0.8 to Def, Def does 0.8 to Str
+		// Apply Bonus/Weakness multipliers
 		switch(attacker.PrimaryStat){
 			case (Unit.StatType.Agility):
 				if (defender.PrimaryStat == Unit.StatType.Strength) {
