@@ -405,7 +405,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2159309a813877640ad02597ad23745f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eae4054bf56d9fd45acb17bd2dfef0b4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3226,7 +3226,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380009325}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -7617,7 +7617,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8682417f6e9769540ac84bc25842529a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3effbff214a1bd0418027751fb3df331, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8895,6 +8895,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e16e41dea93d947b360a57ef1a6df8, type: 3}
 --- !u!4 &1079718607 stripped
@@ -10080,6 +10085,11 @@ PrefabInstance:
     - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
         type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11852,6 +11862,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e16e41dea93d947b360a57ef1a6df8, type: 3}
 --- !u!4 &1562583369 stripped
@@ -12829,6 +12844,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e16e41dea93d947b360a57ef1a6df8, type: 3}
 --- !u!4 &1674866838 stripped
@@ -13098,6 +13118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e16e41dea93d947b360a57ef1a6df8, type: 3}
@@ -14307,6 +14332,11 @@ PrefabInstance:
     - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
         type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15820,6 +15850,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e16e41dea93d947b360a57ef1a6df8, type: 3}
 --- !u!4 &2112616935 stripped
@@ -16532,6 +16567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539256855195438742, guid: 49e16e41dea93d947b360a57ef1a6df8,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e16e41dea93d947b360a57ef1a6df8, type: 3}

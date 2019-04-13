@@ -93,10 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb1302793612c41989b8d1a5e82da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Manticore
-  UnitDescription: The Manticore is the tankier version of Cerberus, forgoing some
-    of its agility stats, the stronger Manticore is bound to stay in your dungeon
-    longer
+  UnitName: Alpha Hound
+  UnitDescription: The Alpha Hound brings the big criticals to your dungeon. It is
+    the highest hitting monster with massive critical strikes. Beware, critical strikes
+    may fail
   Mana: 50
   Type: 0
   UnitStats:
@@ -104,7 +104,7 @@ MonoBehaviour:
     Agility: 59
     Defence: 24
     Constitution: 24
-  UnitProtrait: {fileID: 21300000, guid: 2159309a813877640ad02597ad23745f, type: 3}
+  UnitProtrait: {fileID: 21300000, guid: eae4054bf56d9fd45acb17bd2dfef0b4, type: 3}
   PrimaryStat: 1
 --- !u!61 &2897966073191701804
 BoxCollider2D:
