@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
+	public GameObject damageText;
+
 	private float waitDuration = 1;
 
 	private GameController gameController;
@@ -56,7 +58,10 @@ public class BattleManager : MonoBehaviour
 				break;	
 		}
 
+		DamageTextScript newDamageText = Instantiate(damageText, defender.gameObject.transform).GetComponent<DamageTextScript>();
+		newDamageText.value = finalDamage;
 		defender.TakeDamage(finalDamage);
+
 		if (attacker.Type == Unit.UnitType.Man) {
 			gameController.UpdateEvent("<color=\"red\">" + attacker.UnitName + "</color> hits <color=\"green\">" + defender.UnitName + "</color> for <color=\"orange\">" + finalDamage + "</color>");
 		} else {
@@ -70,8 +75,8 @@ public class BattleManager : MonoBehaviour
 		int manAttackCount = 0;
 
 		while (monsters.Count > 0 && men.Count > 0) {
-			Unit monsterUnit;// = monsters[monsterAttackCount % monsters.Count];
-			Unit manUnit;// = men[manAttackCount % men.Count];
+			Unit monsterUnit;
+			Unit manUnit;
 
 			if (isMonsterAttack) {
 				monsterUnit = monsters[monsterAttackCount % monsters.Count];
