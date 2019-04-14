@@ -15,13 +15,14 @@ public class GameController : MonoBehaviour {
 	private WaveManager waveManager;
 	private LandManager landManager;
 
-	public int EndOfWaveMana = 20;
 	[HideInInspector]
 	public int mana = 30;
 	[HideInInspector]
 	public int wave = 1;
 	[HideInInspector]
 	public bool isWaveRunning = false;
+
+	private bool debugMode = false;
 
 	private AudioSource battleAudio;
 
@@ -53,8 +54,11 @@ public class GameController : MonoBehaviour {
 		manaText.text = mana.ToString();
 		waveText.text = "Wave: " + wave;
 
-		// Remove on actual build
-		if (Input.GetKeyDown(KeyCode.M)) {
+		if (Input.GetKeyDown(KeyCode.D)) {
+			debugMode = !debugMode;
+		}
+
+		if (debugMode && Input.GetKeyDown(KeyCode.M)) {
 			mana += 100;
 		}
     }
@@ -99,26 +103,29 @@ public class GameController : MonoBehaviour {
 			UpdateEvent("Wave Failed");
 			battleAudio.Stop();
 
-			//GameLostCanvas.enabled = true;
+			if (!debugMode)
+			{
+				GameLostCanvas.enabled = true;
+			} else {
+				waveManager.DespawnWave(men);
+				if (NextWave2.Count > 0) {
+					waveManager.DespawnWave(NextWave2);
+				}
 
-			waveManager.DespawnWave(men);
-			if (NextWave2.Count > 0) {
-				waveManager.DespawnWave(NextWave2);
+				mana += GetEndOfWaveMana();// + landManager.landBonus[landManager.landCount - 1];
+				wave++;
+
+				NextWave = waveManager.SpawnWave();
+				NextWave2 = waveManager.SpawnWave2();
+
+				WaveHoldingArea.DisplayMen(NextWave);
+				WaveHoldingArea2.DisplayMen(NextWave2);
+
+				isWaveRunning = false;
+
+				WaveButton.enabled = true;
+				ShopButton.enabled = true;
 			}
-			
-			mana += EndOfWaveMana + landManager.landBonus[landManager.landCount - 1];
-			wave++;
-
-			NextWave = waveManager.SpawnWave();
-			NextWave2 = waveManager.SpawnWave2();
-
-			WaveHoldingArea.DisplayMen(NextWave);
-			WaveHoldingArea2.DisplayMen(NextWave2);
-
-			isWaveRunning = false;
-
-			WaveButton.enabled = true;
-			ShopButton.enabled = true;
 		} else {
 			waveManager.DespawnWave(men);
 
@@ -134,7 +141,7 @@ public class GameController : MonoBehaviour {
 				if (wave == 50) {
 					GameWonCanvas.enabled = true;
 				} else {
-					mana += EndOfWaveMana + landManager.landBonus[landManager.landCount - 1];
+					mana += GetEndOfWaveMana();// + landManager.landBonus[landManager.landCount - 1];
 					wave++;
 
 					NextWave = waveManager.SpawnWave();
@@ -156,4 +163,17 @@ public class GameController : MonoBehaviour {
 		eventText.text = incomingText;
 	}
 
+	private int GetEndOfWaveMana() {
+		if (wave < 25) {
+			return 20;
+		} else if (wave < 30) {
+			return 40;
+		} else if (wave < 35) {
+			return 60;
+		} else if (wave < 40) {
+			return 80;
+		} else {
+			return 100;
+		}
+	}
 }

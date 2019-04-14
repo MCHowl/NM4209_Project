@@ -33,7 +33,7 @@ public class WaveManager : MonoBehaviour {
 			}
 
 		} else if (gameController.wave == 50) {
-			men.Add(Instantiate(manUnits[0]).GetComponent<Unit>());
+			men.Add(GetMan());
 			men[0].SetLevel(75);
 		}
 

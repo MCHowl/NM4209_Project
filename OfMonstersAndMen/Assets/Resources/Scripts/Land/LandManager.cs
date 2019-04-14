@@ -8,7 +8,7 @@ public class LandManager : MonoBehaviour {
 
 	public int[] landCost;
 	public int[] landSale;
-	public int[] landBonus;
+	//public int[] landBonus;
 
 	public Land[] landList;
 
@@ -22,7 +22,7 @@ public class LandManager : MonoBehaviour {
 
 		landCost = new int[8] { 30, 30, 60, 120, 180, 240, 300, int.MaxValue };
 		landSale = new int[8] { int.MaxValue, 20, 20, 30, 60, 90, 120, 150 };
-		landBonus = new int[8] { 0, 0, 0, 10, 20, 30, 40, 50 };
+		//landBonus = new int[8] { 0, 0, 0, 10, 20, 30, 40, 50 };
 
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		battleManager = GameObject.FindGameObjectWithTag("BattleManager").GetComponent<BattleManager>();

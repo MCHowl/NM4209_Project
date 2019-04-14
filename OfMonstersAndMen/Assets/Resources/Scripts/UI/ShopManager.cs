@@ -25,7 +25,7 @@ public class ShopManager : MonoBehaviour {
 	public Button UnlockButton;
 	public TextMeshProUGUI LandBuyText;
 	public TextMeshProUGUI LandSellText;
-	public TextMeshProUGUI LandBonusText;
+	//public TextMeshProUGUI LandBonusText;
 
 	int selectedIndex;
 	GameObject selectedMonster;
@@ -158,7 +158,7 @@ public class ShopManager : MonoBehaviour {
 			LandSellText.text = "Sell Land (" + landManager.landSale[landManager.landCount - 1] + ")";
 		}
 
-		LandBonusText.text = "Current End of Wave Bonus: " + landManager.landBonus[landManager.landCount - 1];
+		//LandBonusText.text = "Current End of Wave Bonus: " + landManager.landBonus[landManager.landCount - 1];
 	}
 
 	public void ResetShop() {

@@ -15,11 +15,11 @@ public class BattleManager : MonoBehaviour
 	}
 
 	public static float StrengthModifier = 0.8f;
-	public static float AgilityModifier = 0.3f;
-	public static float DefenseModifier = 0.5f;
+	public static float AgilityModifier = 0.5f;
+	public static float DefenseModifier = 0.4f;
 
-	private static float BonusMultiplier = 1.2f;
-	private static float WeaknessMultiplier = 0.8f;
+	private static float BonusMultiplier = 1.4f;
+	private static float WeaknessMultiplier = 0.7f;
 
 	public void Fight(Unit attacker, Unit defender) {
 		float incomingDamage = attacker.GetAttackValue() * StrengthModifier;
