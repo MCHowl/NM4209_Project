@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void Update() {
-		manaText.text = "Mana: " + mana;
+		manaText.text = mana.ToString();
 		waveText.text = "Wave: " + wave;
 
 		// Remove on actual build
@@ -98,6 +98,8 @@ public class GameController : MonoBehaviour {
 		if (men.Count > 0) {
 			UpdateEvent("Wave Failed");
 			battleAudio.Stop();
+
+			//GameLostCanvas.enabled = true;
 
 			waveManager.DespawnWave(men);
 			if (NextWave2.Count > 0) {
