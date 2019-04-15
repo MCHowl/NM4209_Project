@@ -96,8 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitName: Hell Guardian
   UnitDescription: The Hell Guardian is the tankier version of Alpha Hound, forgoing
-    some of its agility stats, the stronger Hell Guardian is bound to stay in your
-    dungeon longer
+    some of its agility to withstand more hits
   Mana: 50
   Type: 0
   UnitStats:

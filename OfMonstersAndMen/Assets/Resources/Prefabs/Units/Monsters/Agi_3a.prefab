@@ -96,8 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitName: Alpha Hound
   UnitDescription: The Alpha Hound brings the big criticals to your dungeon. It is
-    the highest hitting monster with massive critical strikes. Beware, critical strikes
-    may fail
+    the highest hitting monster with massive critical strikes
   Mana: 50
   Type: 0
   UnitStats:
