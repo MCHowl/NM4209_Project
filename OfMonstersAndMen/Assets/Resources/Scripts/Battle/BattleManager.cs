@@ -14,6 +14,16 @@ public class BattleManager : MonoBehaviour
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 
+	private void Update() {
+		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+			SetWaitDuration(1);
+		} else if (Input.GetKey(KeyCode.Alpha2)) {
+			SetWaitDuration(0.5f);
+		} else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+			SetWaitDuration(0.1f);
+		}
+	}
+
 	public static float StrengthModifier = 0.8f;
 	public static float AgilityModifier = 0.5f;
 	public static float DefenseModifier = 0.4f;

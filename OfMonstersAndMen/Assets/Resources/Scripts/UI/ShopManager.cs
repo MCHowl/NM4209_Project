@@ -40,6 +40,16 @@ public class ShopManager : MonoBehaviour {
 		CloseShop();
     }
 
+	private void Update() {
+		if (Input.GetKeyDown(KeyCode.S) && !gameController.isWaveRunning) {
+			if (shopCanvas.enabled) {
+				CloseShop();
+			} else {
+				OpenShop();
+			}
+		}
+	}
+
 	public void BuyUnit() {
 		if (monsterManager.Inventory.monsterUnits.Count < monsterManager.Inventory.landLimit) {
 			if (gameController.SpendMana(selectedMonster.GetComponent<Unit>().Mana)) {

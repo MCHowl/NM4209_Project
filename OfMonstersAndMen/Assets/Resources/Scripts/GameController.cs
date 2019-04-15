@@ -58,6 +58,10 @@ public class GameController : MonoBehaviour {
 			debugMode = !debugMode;
 		}
 
+		if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) {
+			StartWave();
+		}
+
 		if (debugMode && Input.GetKeyDown(KeyCode.M)) {
 			mana += 100;
 		}
